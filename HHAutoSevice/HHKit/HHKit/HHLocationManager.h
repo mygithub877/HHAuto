@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger,HHLocationResult) {
     HHLocationResultDenied,//用户拒绝app使用定位
     HHLocationResultRestricted//当前用户没有权限使用定位，比如家长控制
 };
-typedef  (^CompleteLocationBlock)(HHLocation *location,HHLocationResult resultState);
+typedef void (^CompleteLocationBlock)(HHLocation *location,HHLocationResult resultState);
 
 
 #pragma mark - manager
