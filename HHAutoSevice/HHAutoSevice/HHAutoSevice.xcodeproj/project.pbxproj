@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED0CAFF01D40A29000879506 /* HHKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0CAFEF1D40A29000879506 /* HHKit.framework */; };
+		EDE6DAEF1D3329AC00B33EAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DAEE1D3329AC00B33EAD /* main.m */; };
+		EDE6DAF21D3329AC00B33EAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DAF11D3329AC00B33EAD /* AppDelegate.m */; };
+		EDE6DAF51D3329AC00B33EAD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DAF41D3329AC00B33EAD /* MasterViewController.m */; };
+		EDE6DAF81D3329AC00B33EAD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DAF71D3329AC00B33EAD /* DetailViewController.m */; };
+		EDE6DAFB1D3329AC00B33EAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE6DAF91D3329AC00B33EAD /* Main.storyboard */; };
+		EDE6DAFD1D3329AC00B33EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE6DAFC1D3329AC00B33EAD /* Assets.xcassets */; };
+		EDE6DB001D3329AC00B33EAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE6DAFE1D3329AC00B33EAD /* LaunchScreen.storyboard */; };
+		EDE6DB0B1D3329AC00B33EAD /* HHAutoSeviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DB0A1D3329AC00B33EAD /* HHAutoSeviceTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDE6DB071D3329AC00B33EAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDE6DAE21D3329AC00B33EAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDE6DAE91D3329AC00B33EAD;
+			remoteInfo = HHAutoSevice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED0CAFEF1D40A29000879506 /* HHKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HHKit.framework; path = ../../HHKit/Products/HHKit.framework; sourceTree = "<group>"; };
+		EDE6DAEA1D3329AC00B33EAD /* HHAutoSevice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHAutoSevice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE6DAEE1D3329AC00B33EAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EDE6DAF01D3329AC00B33EAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EDE6DAF11D3329AC00B33EAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EDE6DAF31D3329AC00B33EAD /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		EDE6DAF41D3329AC00B33EAD /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		EDE6DAF61D3329AC00B33EAD /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		EDE6DAF71D3329AC00B33EAD /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		EDE6DAFA1D3329AC00B33EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDE6DAFC1D3329AC00B33EAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDE6DAFF1D3329AC00B33EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDE6DB011D3329AC00B33EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE6DB061D3329AC00B33EAD /* HHAutoSeviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHAutoSeviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE6DB0A1D3329AC00B33EAD /* HHAutoSeviceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAutoSeviceTests.m; sourceTree = "<group>"; };
+		EDE6DB0C1D3329AC00B33EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDE6DAE71D3329AC00B33EAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0CAFF01D40A29000879506 /* HHKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE6DB031D3329AC00B33EAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDE6DAE11D3329AC00B33EAD = {
+			isa = PBXGroup;
+			children = (
+				EDE6DAEC1D3329AC00B33EAD /* HHAutoSevice */,
+				EDE6DB091D3329AC00B33EAD /* HHAutoSeviceTests */,
+				EDE6DAEB1D3329AC00B33EAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDE6DAEB1D3329AC00B33EAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDE6DAEA1D3329AC00B33EAD /* HHAutoSevice.app */,
+				EDE6DB061D3329AC00B33EAD /* HHAutoSeviceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDE6DAEC1D3329AC00B33EAD /* HHAutoSevice */ = {
+			isa = PBXGroup;
+			children = (
+				ED0CAFEF1D40A29000879506 /* HHKit.framework */,
+				EDE6DAF01D3329AC00B33EAD /* AppDelegate.h */,
+				EDE6DAF11D3329AC00B33EAD /* AppDelegate.m */,
+				EDE6DAF31D3329AC00B33EAD /* MasterViewController.h */,
+				EDE6DAF41D3329AC00B33EAD /* MasterViewController.m */,
+				EDE6DAF61D3329AC00B33EAD /* DetailViewController.h */,
+				EDE6DAF71D3329AC00B33EAD /* DetailViewController.m */,
+				EDE6DAF91D3329AC00B33EAD /* Main.storyboard */,
+				EDE6DAFC1D3329AC00B33EAD /* Assets.xcassets */,
+				EDE6DAFE1D3329AC00B33EAD /* LaunchScreen.storyboard */,
+				EDE6DB011D3329AC00B33EAD /* Info.plist */,
+				EDE6DAED1D3329AC00B33EAD /* Supporting Files */,
+			);
+			path = HHAutoSevice;
+			sourceTree = "<group>";
+		};
+		EDE6DAED1D3329AC00B33EAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDE6DAEE1D3329AC00B33EAD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDE6DB091D3329AC00B33EAD /* HHAutoSeviceTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDE6DB0A1D3329AC00B33EAD /* HHAutoSeviceTests.m */,
+				EDE6DB0C1D3329AC00B33EAD /* Info.plist */,
+			);
+			path = HHAutoSeviceTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDE6DAE91D3329AC00B33EAD /* HHAutoSevice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE6DB0F1D3329AC00B33EAD /* Build configuration list for PBXNativeTarget "HHAutoSevice" */;
+			buildPhases = (
+				EDE6DAE61D3329AC00B33EAD /* Sources */,
+				EDE6DAE71D3329AC00B33EAD /* Frameworks */,
+				EDE6DAE81D3329AC00B33EAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HHAutoSevice;
+			productName = HHAutoSevice;
+			productReference = EDE6DAEA1D3329AC00B33EAD /* HHAutoSevice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDE6DB051D3329AC00B33EAD /* HHAutoSeviceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDE6DB121D3329AC00B33EAD /* Build configuration list for PBXNativeTarget "HHAutoSeviceTests" */;
+			buildPhases = (
+				EDE6DB021D3329AC00B33EAD /* Sources */,
+				EDE6DB031D3329AC00B33EAD /* Frameworks */,
+				EDE6DB041D3329AC00B33EAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDE6DB081D3329AC00B33EAD /* PBXTargetDependency */,
+			);
+			name = HHAutoSeviceTests;
+			productName = HHAutoSeviceTests;
+			productReference = EDE6DB061D3329AC00B33EAD /* HHAutoSeviceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDE6DAE21D3329AC00B33EAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = HHAuto;
+				TargetAttributes = {
+					EDE6DAE91D3329AC00B33EAD = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					EDE6DB051D3329AC00B33EAD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = EDE6DAE91D3329AC00B33EAD;
+					};
+				};
+			};
+			buildConfigurationList = EDE6DAE51D3329AC00B33EAD /* Build configuration list for PBXProject "HHAutoSevice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDE6DAE11D3329AC00B33EAD;
+			productRefGroup = EDE6DAEB1D3329AC00B33EAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDE6DAE91D3329AC00B33EAD /* HHAutoSevice */,
+				EDE6DB051D3329AC00B33EAD /* HHAutoSeviceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDE6DAE81D3329AC00B33EAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE6DB001D3329AC00B33EAD /* LaunchScreen.storyboard in Resources */,
+				EDE6DAFD1D3329AC00B33EAD /* Assets.xcassets in Resources */,
+				EDE6DAFB1D3329AC00B33EAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE6DB041D3329AC00B33EAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDE6DAE61D3329AC00B33EAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE6DAF21D3329AC00B33EAD /* AppDelegate.m in Sources */,
+				EDE6DAF51D3329AC00B33EAD /* MasterViewController.m in Sources */,
+				EDE6DAEF1D3329AC00B33EAD /* main.m in Sources */,
+				EDE6DAF81D3329AC00B33EAD /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE6DB021D3329AC00B33EAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE6DB0B1D3329AC00B33EAD /* HHAutoSeviceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDE6DB081D3329AC00B33EAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDE6DAE91D3329AC00B33EAD /* HHAutoSevice */;
+			targetProxy = EDE6DB071D3329AC00B33EAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EDE6DAF91D3329AC00B33EAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE6DAFA1D3329AC00B33EAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDE6DAFE1D3329AC00B33EAD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDE6DAFF1D3329AC00B33EAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDE6DB0D1D3329AC00B33EAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EDE6DB0E1D3329AC00B33EAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDE6DB101D3329AC00B33EAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HHAutoSevice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhauto.HHAutoSevice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EDE6DB111D3329AC00B33EAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HHAutoSevice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhauto.HHAutoSevice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EDE6DB131D3329AC00B33EAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HHAutoSeviceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhauto.HHAutoSeviceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHAutoSevice.app/HHAutoSevice";
+			};
+			name = Debug;
+		};
+		EDE6DB141D3329AC00B33EAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HHAutoSeviceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhauto.HHAutoSeviceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHAutoSevice.app/HHAutoSevice";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDE6DAE51D3329AC00B33EAD /* Build configuration list for PBXProject "HHAutoSevice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE6DB0D1D3329AC00B33EAD /* Debug */,
+				EDE6DB0E1D3329AC00B33EAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE6DB0F1D3329AC00B33EAD /* Build configuration list for PBXNativeTarget "HHAutoSevice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE6DB101D3329AC00B33EAD /* Debug */,
+				EDE6DB111D3329AC00B33EAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDE6DB121D3329AC00B33EAD /* Build configuration list for PBXNativeTarget "HHAutoSeviceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDE6DB131D3329AC00B33EAD /* Debug */,
+				EDE6DB141D3329AC00B33EAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDE6DAE21D3329AC00B33EAD /* Project object */;
+}
