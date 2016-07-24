@@ -21,21 +21,23 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0D5695BA1D40F6320070F9DF /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5695B81D40F6320070F9DF /* MBProgressHUD.h */; };
-		0D5695BB1D40F6320070F9DF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5695B91D40F6320070F9DF /* MBProgressHUD.m */; };
-		0D5695BE1D40F6390070F9DF /* Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5695BD1D40F6390070F9DF /* Header.h */; };
-		ED0CAFED1D40773C00879506 /* HHLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0CAFEB1D40773C00879506 /* HHLocationManager.h */; };
-		ED0CAFEE1D40773C00879506 /* HHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0CAFEC1D40773C00879506 /* HHLocationManager.m */; };
-		EDE6DAD71D3328CC00B33EAD /* HHCPUUsage.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE6DACC1D3328CC00B33EAD /* HHCPUUsage.h */; };
-		EDE6DAD81D3328CC00B33EAD /* HHCPUUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DACD1D3328CC00B33EAD /* HHCPUUsage.m */; };
-		EDE6DAD91D3328CC00B33EAD /* HHMemoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE6DACE1D3328CC00B33EAD /* HHMemoryInfo.h */; };
-		EDE6DADA1D3328CC00B33EAD /* HHMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DACF1D3328CC00B33EAD /* HHMemoryInfo.m */; };
-		EDE6DADB1D3328CC00B33EAD /* HHSystemInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE6DAD01D3328CC00B33EAD /* HHSystemInfo.h */; };
-		EDE6DADC1D3328CC00B33EAD /* HHSystemInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DAD11D3328CC00B33EAD /* HHSystemInfo.mm */; };
-		EDE6DADD1D3328CC00B33EAD /* HHBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE6DAD31D3328CC00B33EAD /* HHBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EDE6DADE1D3328CC00B33EAD /* HHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DAD41D3328CC00B33EAD /* HHBaseViewController.m */; };
-		EDE6DADF1D3328CC00B33EAD /* HHBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE6DAD51D3328CC00B33EAD /* HHBlurView.h */; };
-		EDE6DAE01D3328CC00B33EAD /* HHBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DAD61D3328CC00B33EAD /* HHBlurView.m */; };
+		0D5695E81D4347820070F9DF /* HHCPUUsage.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5695E21D4347820070F9DF /* HHCPUUsage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5695E91D4347820070F9DF /* HHCPUUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5695E31D4347820070F9DF /* HHCPUUsage.m */; };
+		0D5695EA1D4347820070F9DF /* HHMemoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5695E41D4347820070F9DF /* HHMemoryInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5695EB1D4347820070F9DF /* HHMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5695E51D4347820070F9DF /* HHMemoryInfo.m */; };
+		0D5695EC1D4347820070F9DF /* HHSystemInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5695E61D4347820070F9DF /* HHSystemInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5695ED1D4347820070F9DF /* HHSystemInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D5695E71D4347820070F9DF /* HHSystemInfo.mm */; };
+		0D5695F31D4347BD0070F9DF /* HHBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5695EF1D4347BD0070F9DF /* HHBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5695F41D4347BD0070F9DF /* HHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5695F01D4347BD0070F9DF /* HHBaseViewController.m */; };
+		0D5695F51D4347BD0070F9DF /* HHBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5695F11D4347BD0070F9DF /* HHBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5695F61D4347BD0070F9DF /* HHBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5695F21D4347BD0070F9DF /* HHBlurView.m */; };
+		0D5695FD1D4347C70070F9DF /* HHLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5695F71D4347C70070F9DF /* HHLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5695FE1D4347C70070F9DF /* HHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5695F81D4347C70070F9DF /* HHLocationManager.m */; };
+		0D5695FF1D4347C70070F9DF /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5695FB1D4347C70070F9DF /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5696001D4347C70070F9DF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5695FC1D4347C70070F9DF /* MBProgressHUD.m */; };
+		0D5696031D4348290070F9DF /* PrivateHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696021D4348290070F9DF /* PrivateHeader.h */; };
+		0D5696181D44C3510070F9DF /* HHAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696161D44C3510070F9DF /* HHAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5696191D44C3510070F9DF /* HHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696171D44C3510070F9DF /* HHAlertView.m */; };
 		EDF5952E1D2F4D0600052039 /* HHKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF5952D1D2F4D0600052039 /* HHKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDF595351D2F4D0600052039 /* HHKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF5952A1D2F4D0600052039 /* HHKit.framework */; };
 		EDF5953A1D2F4D0600052039 /* HHKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF595391D2F4D0600052039 /* HHKitTests.m */; };
@@ -52,21 +54,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D5695B81D40F6320070F9DF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		0D5695B91D40F6320070F9DF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		0D5695BD1D40F6390070F9DF /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		ED0CAFEB1D40773C00879506 /* HHLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHLocationManager.h; sourceTree = "<group>"; };
-		ED0CAFEC1D40773C00879506 /* HHLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHLocationManager.m; sourceTree = "<group>"; };
-		EDE6DACC1D3328CC00B33EAD /* HHCPUUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCPUUsage.h; sourceTree = "<group>"; };
-		EDE6DACD1D3328CC00B33EAD /* HHCPUUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCPUUsage.m; sourceTree = "<group>"; };
-		EDE6DACE1D3328CC00B33EAD /* HHMemoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHMemoryInfo.h; sourceTree = "<group>"; };
-		EDE6DACF1D3328CC00B33EAD /* HHMemoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHMemoryInfo.m; sourceTree = "<group>"; };
-		EDE6DAD01D3328CC00B33EAD /* HHSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSystemInfo.h; sourceTree = "<group>"; };
-		EDE6DAD11D3328CC00B33EAD /* HHSystemInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HHSystemInfo.mm; sourceTree = "<group>"; };
-		EDE6DAD31D3328CC00B33EAD /* HHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseViewController.h; sourceTree = "<group>"; };
-		EDE6DAD41D3328CC00B33EAD /* HHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseViewController.m; sourceTree = "<group>"; };
-		EDE6DAD51D3328CC00B33EAD /* HHBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBlurView.h; sourceTree = "<group>"; };
-		EDE6DAD61D3328CC00B33EAD /* HHBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBlurView.m; sourceTree = "<group>"; };
+		0D5695E21D4347820070F9DF /* HHCPUUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCPUUsage.h; sourceTree = "<group>"; };
+		0D5695E31D4347820070F9DF /* HHCPUUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCPUUsage.m; sourceTree = "<group>"; };
+		0D5695E41D4347820070F9DF /* HHMemoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHMemoryInfo.h; sourceTree = "<group>"; };
+		0D5695E51D4347820070F9DF /* HHMemoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHMemoryInfo.m; sourceTree = "<group>"; };
+		0D5695E61D4347820070F9DF /* HHSystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSystemInfo.h; sourceTree = "<group>"; };
+		0D5695E71D4347820070F9DF /* HHSystemInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HHSystemInfo.mm; sourceTree = "<group>"; };
+		0D5695EF1D4347BD0070F9DF /* HHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseViewController.h; sourceTree = "<group>"; };
+		0D5695F01D4347BD0070F9DF /* HHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseViewController.m; sourceTree = "<group>"; };
+		0D5695F11D4347BD0070F9DF /* HHBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBlurView.h; sourceTree = "<group>"; };
+		0D5695F21D4347BD0070F9DF /* HHBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBlurView.m; sourceTree = "<group>"; };
+		0D5695F71D4347C70070F9DF /* HHLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHLocationManager.h; sourceTree = "<group>"; };
+		0D5695F81D4347C70070F9DF /* HHLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHLocationManager.m; sourceTree = "<group>"; };
+		0D5695FB1D4347C70070F9DF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		0D5695FC1D4347C70070F9DF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		0D5696021D4348290070F9DF /* PrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateHeader.h; sourceTree = "<group>"; };
+		0D5696161D44C3510070F9DF /* HHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAlertView.h; sourceTree = "<group>"; };
+		0D5696171D44C3510070F9DF /* HHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAlertView.m; sourceTree = "<group>"; };
 		EDF5952A1D2F4D0600052039 /* HHKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HHKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF5952D1D2F4D0600052039 /* HHKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHKit.h; sourceTree = "<group>"; };
 		EDF5952F1D2F4D0600052039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,53 +98,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D5695B61D40F6320070F9DF /* Vender */ = {
+		0D5695E11D4347820070F9DF /* Foundation  */ = {
 			isa = PBXGroup;
 			children = (
-				0D5695B71D40F6320070F9DF /* MBProgressHUD */,
-			);
-			path = Vender;
-			sourceTree = "<group>";
-		};
-		0D5695B71D40F6320070F9DF /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				0D5695B81D40F6320070F9DF /* MBProgressHUD.h */,
-				0D5695B91D40F6320070F9DF /* MBProgressHUD.m */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		0D5695BC1D40F6390070F9DF /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				0D5695BD1D40F6390070F9DF /* Header.h */,
-			);
-			path = Private;
-			sourceTree = "<group>";
-		};
-		EDE6DACB1D3328CC00B33EAD /* Foundation  */ = {
-			isa = PBXGroup;
-			children = (
-				EDE6DACC1D3328CC00B33EAD /* HHCPUUsage.h */,
-				EDE6DACD1D3328CC00B33EAD /* HHCPUUsage.m */,
-				EDE6DACE1D3328CC00B33EAD /* HHMemoryInfo.h */,
-				EDE6DACF1D3328CC00B33EAD /* HHMemoryInfo.m */,
-				EDE6DAD01D3328CC00B33EAD /* HHSystemInfo.h */,
-				EDE6DAD11D3328CC00B33EAD /* HHSystemInfo.mm */,
+				0D5695E21D4347820070F9DF /* HHCPUUsage.h */,
+				0D5695E31D4347820070F9DF /* HHCPUUsage.m */,
+				0D5695E41D4347820070F9DF /* HHMemoryInfo.h */,
+				0D5695E51D4347820070F9DF /* HHMemoryInfo.m */,
+				0D5695E61D4347820070F9DF /* HHSystemInfo.h */,
+				0D5695E71D4347820070F9DF /* HHSystemInfo.mm */,
 			);
 			path = "Foundation ";
 			sourceTree = "<group>";
 		};
-		EDE6DAD21D3328CC00B33EAD /* UIKit */ = {
+		0D5695EE1D4347BD0070F9DF /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				EDE6DAD31D3328CC00B33EAD /* HHBaseViewController.h */,
-				EDE6DAD41D3328CC00B33EAD /* HHBaseViewController.m */,
-				EDE6DAD51D3328CC00B33EAD /* HHBlurView.h */,
-				EDE6DAD61D3328CC00B33EAD /* HHBlurView.m */,
+				0D5695EF1D4347BD0070F9DF /* HHBaseViewController.h */,
+				0D5695F01D4347BD0070F9DF /* HHBaseViewController.m */,
+				0D5695F11D4347BD0070F9DF /* HHBlurView.h */,
+				0D5695F21D4347BD0070F9DF /* HHBlurView.m */,
+				0D5696161D44C3510070F9DF /* HHAlertView.h */,
+				0D5696171D44C3510070F9DF /* HHAlertView.m */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		0D5695F91D4347C70070F9DF /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				0D5695FA1D4347C70070F9DF /* MBProgressHUD */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		0D5695FA1D4347C70070F9DF /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0D5695FB1D4347C70070F9DF /* MBProgressHUD.h */,
+				0D5695FC1D4347C70070F9DF /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		0D5696011D4348290070F9DF /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				0D5696021D4348290070F9DF /* PrivateHeader.h */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 		EDF595201D2F4D0600052039 = {
@@ -164,17 +170,14 @@
 		EDF5952C1D2F4D0600052039 /* HHKit */ = {
 			isa = PBXGroup;
 			children = (
-				0D5695BC1D40F6390070F9DF /* Private */,
-				0D5695B61D40F6320070F9DF /* Vender */,
-				EDE6DACB1D3328CC00B33EAD /* Foundation  */,
-				EDE6DAD21D3328CC00B33EAD /* UIKit */,
-				EDF595471D2F51B400052039 /* Support */,
-				EDF595461D2F519F00052039 /* Extension */,
-				EDF595441D2F4F3700052039 /* Core */,
+				0D5696011D4348290070F9DF /* Private */,
+				0D5695F71D4347C70070F9DF /* HHLocationManager.h */,
+				0D5695F81D4347C70070F9DF /* HHLocationManager.m */,
+				0D5695F91D4347C70070F9DF /* Vender */,
+				0D5695EE1D4347BD0070F9DF /* UIKit */,
+				0D5695E11D4347820070F9DF /* Foundation  */,
 				EDF5952D1D2F4D0600052039 /* HHKit.h */,
 				EDF5952F1D2F4D0600052039 /* Info.plist */,
-				ED0CAFEB1D40773C00879506 /* HHLocationManager.h */,
-				ED0CAFEC1D40773C00879506 /* HHLocationManager.m */,
 			);
 			path = HHKit;
 			sourceTree = "<group>";
@@ -188,27 +191,6 @@
 			path = HHKitTests;
 			sourceTree = "<group>";
 		};
-		EDF595441D2F4F3700052039 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		EDF595461D2F519F00052039 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Extension;
-			sourceTree = "<group>";
-		};
-		EDF595471D2F51B400052039 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Support;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -216,15 +198,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5695BE1D40F6390070F9DF /* Header.h in Headers */,
-				EDE6DADD1D3328CC00B33EAD /* HHBaseViewController.h in Headers */,
+				0D5696181D44C3510070F9DF /* HHAlertView.h in Headers */,
+				0D5695FF1D4347C70070F9DF /* MBProgressHUD.h in Headers */,
+				0D5696031D4348290070F9DF /* PrivateHeader.h in Headers */,
+				0D5695F31D4347BD0070F9DF /* HHBaseViewController.h in Headers */,
+				0D5695F51D4347BD0070F9DF /* HHBlurView.h in Headers */,
+				0D5695EC1D4347820070F9DF /* HHSystemInfo.h in Headers */,
+				0D5695FD1D4347C70070F9DF /* HHLocationManager.h in Headers */,
+				0D5695EA1D4347820070F9DF /* HHMemoryInfo.h in Headers */,
+				0D5695E81D4347820070F9DF /* HHCPUUsage.h in Headers */,
 				EDF5952E1D2F4D0600052039 /* HHKit.h in Headers */,
-				0D5695BA1D40F6320070F9DF /* MBProgressHUD.h in Headers */,
-				EDE6DADF1D3328CC00B33EAD /* HHBlurView.h in Headers */,
-				EDE6DADB1D3328CC00B33EAD /* HHSystemInfo.h in Headers */,
-				ED0CAFED1D40773C00879506 /* HHLocationManager.h in Headers */,
-				EDE6DAD91D3328CC00B33EAD /* HHMemoryInfo.h in Headers */,
-				EDE6DAD71D3328CC00B33EAD /* HHCPUUsage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +264,7 @@
 					};
 					EDF595291D2F4D0600052039 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 94EF8DEP4Y;
 					};
 					EDF595331D2F4D0600052039 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -335,7 +319,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n\n# 最后合成framework的文件目录\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# 编译完成后生成的真机环境和模拟器环境的framework文件目录\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n\n# 编译真机环境和模拟器环境\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\n\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n#xcodebuild -target \"HHNetworking\" -configuration \"Release\" -project \"HHNetworking.xcodeproj\" -sdk iphonesimulator ARCHS=\"i386 x86_64\" VALID_ARCHS=\"i386 x86_64\" clean build\n\n#xcodebuild -target \"HHNetworking\" -configuration \"Release\" -project \"HHNetworking.xcodeproj\" -sdk iphoneos ARCHS=\"armv7 armv7s arm64\" VALID_ARCHS=\"armv7 armv7s arm64\" clean build\n# 将旧的framework删掉\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\n# 创建一个新的framework文件目录\nmkdir -p \"${INSTALL_DIR}\"\n\n# 将真机环境下编译完成的framework copy到最后合成的目录下\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# 将真机环境下的framework和模拟器环境下的framework合并 (i386 + armv6/armv7) 生成最终的文件\n\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\n#rm -r \"${WRK_DIR}\"\n#打开合成的framework\n\n#open \"${INSTALL_DIR}\"\n\n\n";
+			shellScript = "# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n\n# 最后合成framework的文件目录\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# 编译完成后生成的真机环境和模拟器环境的framework文件目录\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n\n# 编译真机环境和模拟器环境\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\n\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n#xcodebuild -target \"HHNetworking\" -configuration \"Release\" -project \"HHNetworking.xcodeproj\" -sdk iphonesimulator ARCHS=\"i386 x86_64\" VALID_ARCHS=\"i386 x86_64\" clean build\n\n#xcodebuild -target \"HHNetworking\" -configuration \"Release\" -project \"HHNetworking.xcodeproj\" -sdk iphoneos ARCHS=\"armv7 armv7s arm64\" VALID_ARCHS=\"armv7 armv7s arm64\" clean build\n# 将旧的framework删掉\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\n# 创建一个新的framework文件目录\nmkdir -p \"${INSTALL_DIR}\"\n\n# 将真机环境下编译完成的framework copy到最后合成的目录下\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# 将真机环境下的framework和模拟器环境下的framework合并 (i386 + armv6/armv7) 生成最终的文件\n\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"\n#打开合成的framework\n\n#open \"${INSTALL_DIR}\"\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -344,13 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE6DADA1D3328CC00B33EAD /* HHMemoryInfo.m in Sources */,
-				EDE6DAD81D3328CC00B33EAD /* HHCPUUsage.m in Sources */,
-				ED0CAFEE1D40773C00879506 /* HHLocationManager.m in Sources */,
-				EDE6DAE01D3328CC00B33EAD /* HHBlurView.m in Sources */,
-				EDE6DADC1D3328CC00B33EAD /* HHSystemInfo.mm in Sources */,
-				EDE6DADE1D3328CC00B33EAD /* HHBaseViewController.m in Sources */,
-				0D5695BB1D40F6320070F9DF /* MBProgressHUD.m in Sources */,
+				0D5695EB1D4347820070F9DF /* HHMemoryInfo.m in Sources */,
+				0D5695E91D4347820070F9DF /* HHCPUUsage.m in Sources */,
+				0D5695FE1D4347C70070F9DF /* HHLocationManager.m in Sources */,
+				0D5696191D44C3510070F9DF /* HHAlertView.m in Sources */,
+				0D5695F61D4347BD0070F9DF /* HHBlurView.m in Sources */,
+				0D5695ED1D4347820070F9DF /* HHSystemInfo.mm in Sources */,
+				0D5695F41D4347BD0070F9DF /* HHBaseViewController.m in Sources */,
+				0D5696001D4347C70070F9DF /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +410,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -467,11 +453,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -480,18 +467,19 @@
 		EDF5953F1D2F4D0600052039 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "${PROJECT_DIR}/HHKit/Private/Header.h";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = HHKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = HH.HHKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huanjiyou.HHKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
@@ -501,18 +489,19 @@
 		EDF595401D2F4D0600052039 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "${PROJECT_DIR}/HHKit/Private/Header.h";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = HHKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = HH.HHKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huanjiyou.HHKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";

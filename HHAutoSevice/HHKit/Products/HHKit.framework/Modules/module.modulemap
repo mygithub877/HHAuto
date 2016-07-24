@@ -1,0 +1,6 @@
+framework module HHKit {
+  umbrella header "HHKit.h"
+
+  export *
+  module * { export * }
+}

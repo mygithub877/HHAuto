@@ -1,6 +1,0 @@
-framework module HHNetworking {
-  umbrella header "HHNetworking.h"
-
-  export *
-  module * { export * }
-}
