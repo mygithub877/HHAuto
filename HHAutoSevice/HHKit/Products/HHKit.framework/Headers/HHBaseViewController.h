@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+<<<<<<< Updated upstream
 @class MBProgressHUD;
+=======
+
+>>>>>>> Stashed changes
 @interface HHBaseViewController : UIViewController
 
 /**
@@ -60,9 +64,13 @@
 
 
 
+<<<<<<< Updated upstream
 - (void)popORDismissViewController;
 - (void)popToViewControllerAtIndex:(NSInteger)index;
 - (void)popToViewControllerAtClass:(Class)aClass;
+=======
+
+>>>>>>> Stashed changes
 
 #pragma mark - UIAlertView
 /*!
@@ -70,26 +78,47 @@
  */
 - (void)showAlertTitle:(NSString *)title
                    message:(NSString *)msg
+<<<<<<< Updated upstream
                     handle:(void (^)(NSInteger index))clickButtonAtIndex
                     cancle:(NSString *)cancle
                     others:(NSString *)others, ... NS_REQUIRES_NIL_TERMINATION;
+=======
+                    handle:(void (^)(UIAlertView *alertView,NSInteger index))clickButtonAtIndex
+                    cancle:(NSString *)cancle
+                    others:(NSString *)others,...;
+>>>>>>> Stashed changes
 /*!
  *  弹出一个简洁化系统alertView
  *  @title 提示
  *  @buttons 取消,确定
  */
 - (void)showAlertMessage:(NSString *)msg
+<<<<<<< Updated upstream
                       handle:(void (^)(NSInteger index))clickButtonAtIndex;
+=======
+                      handle:(void (^)(UIAlertView *alertView,NSInteger index))clickButtonAtIndex;
+>>>>>>> Stashed changes
 /*!
  *  弹出一个简洁化系统alertView
  *  @title 提示
  *  @buttons 确定
  */
 - (void)showNormalAlertMessage:(NSString *)msg
+<<<<<<< Updated upstream
                       handle:(void (^)(NSInteger index))clickButtonAtIndex;
 
 #pragma mark - MBProgressHUD
 /*!
+=======
+                      handle:(void (^)(UIAlertView *alertView,NSInteger index))clickButtonAtIndex;
+
+#pragma mark - MBProgressHUD
+/*!
+ *  显示一个没有文字只有菊花的HUD,需要手动hide
+ */
+- (MBProgressHUD *)showHUD;
+/*!
+>>>>>>> Stashed changes
  *  显示一个带有文字和菊花的HUD,需要手动hide
  */
 - (MBProgressHUD *)showHUDText:(NSString *)text;
