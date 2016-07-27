@@ -84,65 +84,22 @@
                 handle:(void (^)(NSInteger index))clickButtonAtIndex
                 cancle:(NSString *)cancle
                 others:(NSString *)others,...{
-    if ([self iosVersion] >= 8.0) {
-        __block int i=0;
-        UIAlertController *alert=[UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
-        if (cancle) {
-            i++;
-            UIAlertAction *action=[UIAlertAction actionWithTitle:cancle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                if (clickButtonAtIndex) {
-                    clickButtonAtIndex(i-1);
-                }
-            }];
-            [alert addAction:action];
+    HHAlertView *alert=[HHAlertView alloc];
+    [alert initWithTitle:title
+                              message:msg
+                           showTarget:self
+                               handle:clickButtonAtIndex
+                               cancle:cancle
+                               others:others,nil];
+    id eachObject;
+    va_list args;
+    va_start(args, others);
+    while ((eachObject=va_arg(args, id))) {
+        if (eachObject) {
+            [alert addButtonTitle:eachObject];
         }
-        
-        if (others) {
-            i++;
-            UIAlertAction *action=[UIAlertAction actionWithTitle:others style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                if (clickButtonAtIndex) {
-                    clickButtonAtIndex(0);
-                }
-            }];
-            [alert addAction:action];
-        }
-        id eachObject;
-        va_list args;
-        va_start(args, others);
-        if (others) {
-            int k=i;
-            while ((eachObject=va_arg(args, id))) {
-                i++;
-                k++;
-                UIAlertAction *action=[UIAlertAction actionWithTitle:eachObject style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    if (clickButtonAtIndex) {
-                        clickButtonAtIndex(k-2);
-                    }
-
-                }];
-                [alert addAction:action];
-                FMKLOG(@"%@",eachObject);
-            }
-            va_end(args);
-        }
-        [self presentViewController:alert animated:YES completion:nil];
-    }else{
-        _alertHandleBlock=[clickButtonAtIndex copy];
-        UIAlertView *alert=[[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:cancle otherButtonTitles:others, nil];
-        id eachObject;
-        va_list args;
-        va_start(args, others);
-        if (others) {
-            while ((eachObject=va_arg(args, id))) {
-                FMKLOG(@"%@",eachObject);
-                [alert addButtonWithTitle:eachObject];
-            }
-            va_end(args);
-        }
-        [alert show];
     }
-
-   
+    va_end(args);
 
 }
 /*!
@@ -192,11 +149,6 @@
 }
 #pragma mark - delegate
 #pragma mark UIAlertViewDelegate
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (_alertHandleBlock) {
-        _alertHandleBlock(buttonIndex);
-    }
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -207,31 +159,6 @@
     if (_hideKeyboardWhenTouch) {
         [self.view endEditing:YES];
     }
-}
-#pragma mark - private
-- (CGFloat)iosVersion;          ///< 操作系统版本
-{
-    static float versionValue = -1.0;
-    if(versionValue < 0.f)
-    {
-        NSString *os_verson = [[UIDevice currentDevice] systemVersion];
-        
-        // 处理形如6.1.3的版本号，使其变成6.13，方便外部处理
-        NSArray* versionNumbers = [os_verson componentsSeparatedByString:@"."];
-        os_verson = @"";
-        for (int i = 0; i < versionNumbers.count; i++)
-        {
-            os_verson = [os_verson stringByAppendingString:[versionNumbers objectAtIndex:i]];
-            if (i == 0)
-            {
-                os_verson = [os_verson stringByAppendingString:@"."];
-            }
-        }
-        
-        versionValue = [os_verson floatValue];
-    }
-    
-    return versionValue;
 }
 
 /*

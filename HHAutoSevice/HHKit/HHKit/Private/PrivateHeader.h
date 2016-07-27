@@ -53,4 +53,5 @@
 #pragma mark - UIKit
 #import "HHBaseViewController.h"
 #import "HHBlurView.h"
+#import "HHAlertView.h"
 #endif /* Header_h */

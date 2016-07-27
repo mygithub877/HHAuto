@@ -60,7 +60,7 @@
 
 
 
-- (void)popORDismissViewController;
+- (void)popOrDismissViewController;
 - (void)popToViewControllerAtIndex:(NSInteger)index;
 - (void)popToViewControllerAtClass:(Class)aClass;
 

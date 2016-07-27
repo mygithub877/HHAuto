@@ -7,14 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface HHAlertView : NSObject
 /*!
  *  弹出一个系统自带alertView
  */
-- (void)showAlertTitle:(NSString *)title
+- (void)initWithTitle:(NSString *)title
                message:(NSString *)msg
+           showTarget:(UIViewController *)controller
                 handle:(void (^)(NSInteger index))clickButtonAtIndex
                 cancle:(NSString *)cancle
                 others:(NSString *)others, ... NS_REQUIRES_NIL_TERMINATION;
+- (void)addButtonTitle:(NSString *)title;
 @end
