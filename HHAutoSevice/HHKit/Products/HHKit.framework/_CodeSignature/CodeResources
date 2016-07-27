@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/HHBaseViewController.h</key>
 		<data>
-		pW0/hhawt25AqMvWdMc1QnKuXWI=
+		2CFod68UJ8VzTlYp+yEhlNEopGA=
 		</data>
 		<key>Headers/HHBlurView.h</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Headers/HHKit.h</key>
 		<data>
-		Z6r68Hon4Imdd+t7Bzkvtn/8knk=
+		VwpHzIu9SXYE2Tg0wJeoJW3hERM=
 		</data>
 		<key>Headers/HHLocationManager.h</key>
 		<data>
-		BpaqaGGBgnZXr3/wf4S9I6c/sLM=
+		rmWZ0tNWNhbg+v+uykffiv8uv6U=
 		</data>
 		<key>Headers/HHMemoryInfo.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TUPvMCpaRT8fjoXGTTzhBq+wq5k=
+		bpuA85ActOXf2OFC4qqju07Fqhw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,11 +66,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pW0/hhawt25AqMvWdMc1QnKuXWI=
+			2CFod68UJ8VzTlYp+yEhlNEopGA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Qr4XpIOCCqaK9704QmA7Q7vo/daPA1oBCfk9QDsa77Q=
+			RbrGRHLPVCcZq3AIwesvliyTXdIQgHhM4cwa2Sn0oWs=
 			</data>
 		</dict>
 		<key>Headers/HHBlurView.h</key>
@@ -99,22 +99,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z6r68Hon4Imdd+t7Bzkvtn/8knk=
+			VwpHzIu9SXYE2Tg0wJeoJW3hERM=
 			</data>
 			<key>hash2</key>
 			<data>
-			S+tGXWZ0vH1NSe0LID7PLdKjNZooetMpOrHFrcwnGPE=
+			3155aOZ+0B+Yv4ml0yqpRKaXgH+t/Tdnb8zNXhi/t0k=
 			</data>
 		</dict>
 		<key>Headers/HHLocationManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BpaqaGGBgnZXr3/wf4S9I6c/sLM=
+			rmWZ0tNWNhbg+v+uykffiv8uv6U=
 			</data>
 			<key>hash2</key>
 			<data>
-			1gq44PMuCYsnmJFCHuukbMVhE5m76n2REXbf+gkhgzU=
+			0DULCz59GB+rk0LVEYTIy9uMRGLFJCq601fsWnvIZK4=
 			</data>
 		</dict>
 		<key>Headers/HHMemoryInfo.h</key>

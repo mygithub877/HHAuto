@@ -15,7 +15,10 @@
 #define LocationDictLatitude(x) [(x)[@"latitude"] doubleValue]
 
 #define locationPromptTitle @"定位服务未开启"
-#define locationPromptContent @"请在设置中开启定位服务以修改您的地址"
+#define locationPromptContent @"请在设置中开启定位服务"
+
+static NSString *const HHLocationCacheKey = @"HHLocationCacheKey";
+
 
 @interface HHLocationManager()<CLLocationManagerDelegate>
 {
@@ -28,6 +31,8 @@
 
 @end
 @implementation HHLocationManager
+
+@synthesize locationCache=_locationCache;
 
 static HHLocationManager *manager=nil;
 + (instancetype)sharedInstance{
@@ -65,6 +70,14 @@ static HHLocationManager *manager=nil;
             managerStatus = HHLocationStatusDenied;
             break;
         }
+        case kCLAuthorizationStatusAuthorizedAlways:{
+            managerStatus=HHLocationStatusNormal;
+        }
+            break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:{
+            managerStatus=HHLocationStatusNormal;
+        }
+            break;
         default: {
             managerStatus = HHLocationStatusServiceUnabled;
             break;
@@ -75,10 +88,17 @@ static HHLocationManager *manager=nil;
 }
 - (void)storedLocation:(HHLocation *)location
 {
+    _locationCache=location;
+    NSData *archiver=[NSKeyedArchiver archivedDataWithRootObject:location];
     
+    [[NSUserDefaults standardUserDefaults] setObject:location forKey:HHLocationCacheKey];
 }
-- (HHLocation *)locationCache{
-    return nil;
+-(HHLocation *)locationCache{
+    if (_locationCache) {
+        return _locationCache;
+    }else{
+        return [[NSUserDefaults standardUserDefaults]objectForKey:HHLocationCacheKey];
+    }
 }
 #pragma mark - updateLocation
 - (void)startLocationReverseGeocode:(BOOL)isGeo complete:(CompleteLocationBlock)complete{
@@ -89,9 +109,16 @@ static HHLocationManager *manager=nil;
             complete(nil,[self status]);
         }
     }else{
-        _isNeedGeo=isGeo;
-        [_locationManager startUpdatingLocation];
-        self.isUpdatingLocation=YES;
+        if ([self status]!=HHLocationStatusNormal) {
+            _locationEnabled=NO;
+            if (complete) {
+                complete(nil,[self status]);
+            }
+        }else{
+            _isNeedGeo=isGeo;
+            [_locationManager startUpdatingLocation];
+            self.isUpdatingLocation=YES;
+        }
     }
 }
 - (void)startUpdateLocationComplete:(CompleteLocationBlock)complete{
@@ -128,7 +155,9 @@ static HHLocationManager *manager=nil;
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
     printf("\n///////\n\nchange Authorization status\n\n////////\n");
-    
+    if ([self status]==HHLocationStatusDenied) {
+        [self locationServiceUnAuthorizedPrompt];
+    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -146,19 +175,22 @@ static HHLocationManager *manager=nil;
                 __strong typeof(self) strongSelf=weakSelf;
                 strongSelf.isUpdatingLocation = NO;
                 if (error) {
+                    [strongSelf storedLocation:hLocation];
                     if (strongSelf->_completeBlock) {
                         strongSelf->_completeBlock(hLocation,HHLocationStatusFailed);
                     }
                     
                 }else{
-                    
+                    HHLocation *alocation=[[HHLocation alloc] initWithCLPlacemark:placemarks.lastObject];
+                    [strongSelf storedLocation:alocation];
                         if (strongSelf->_completeBlock) {
-                        strongSelf->_completeBlock([[HHLocation alloc] initWithCLPlacemark:placemarks.lastObject],HHLocationStatusNormal);
+                        strongSelf->_completeBlock(alocation,HHLocationStatusNormal);
                     }
                 }
             }];
         }else{
             self.isUpdatingLocation = NO;
+            [self storedLocation:hLocation];
             if (_completeBlock) {
                 _completeBlock(hLocation,HHLocationStatusNormal);
             }
@@ -248,7 +280,22 @@ static HHLocationManager *manager=nil;
     return self;
 }
 -(void)encodeWithCoder:(NSCoder *)aCoder{
-    kFastEncode(aCoder);
+//    kFastEncode(aCoder);
+    u_int count=0;
+    objc_property_t *properties=class_copyPropertyList([self class], &count);
+    for (int i=0; i<count; i++) {
+        const char* pname=property_getName(properties[i]);
+        NSString *key=[NSString stringWithUTF8String:pname];
+        id value=[self valueForKey:key];
+        [aCoder encodeObject:value forKey:key];
+    }
+    free(properties);
 }
-
+- (BOOL)hasFoundationClass:(Class)aClass{
+    NSArray *foundationClass=@[@""];
+    if ([foundationClass containsObject:NSStringFromClass(aClass)]) {
+        return YES;
+    }
+    return NO;
+}
 @end
