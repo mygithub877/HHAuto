@@ -42,7 +42,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
+<<<<<<< HEAD
 		iUbVbFAFUUbi4G8IGTNKA8/A10w=
+=======
+		bpuA85ActOXf2OFC4qqju07Fqhw=
+>>>>>>> origin/master
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

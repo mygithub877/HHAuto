@@ -36,6 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+<<<<<<< HEAD
 //    [self showAlertTitle:@"title" message:@"message" handle:^(NSInteger index) {
 //        NSLog(@"%ld",index);
 //    } cancle:@"aaa" others:@"eeeee",@"aaaa",@"vvvvvv", nil];
@@ -46,6 +47,13 @@
         }];
     }];
 
+=======
+    [[HHLocationManager sharedInstance] startLocationReverseGeocode:YES complete:^(HHLocation *location, HHLocationStatus resultState) {
+//        [self showAlertMessage:location.address handle:^(NSInteger index) {
+//            NSLog(@"%ld",index);
+//        }];
+    }];
+>>>>>>> origin/master
     
 //    [[HHLocationManager sharedInstance] geocodeAddressString:@"天安门" completionHandler:^(HHLocation *location, HHLocationStatus resultState) {
 //        

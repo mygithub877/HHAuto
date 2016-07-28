@@ -91,14 +91,22 @@ static HHLocationManager *manager=nil;
     _locationCache=location;
     NSData *archiver=[NSKeyedArchiver archivedDataWithRootObject:location];
     
+<<<<<<< HEAD
     [[NSUserDefaults standardUserDefaults] setObject:archiver forKey:HHLocationCacheKey];
+=======
+    [[NSUserDefaults standardUserDefaults] setObject:location forKey:HHLocationCacheKey];
+>>>>>>> origin/master
 }
 -(HHLocation *)locationCache{
     if (_locationCache) {
         return _locationCache;
     }else{
+<<<<<<< HEAD
         NSData *data=[[NSUserDefaults standardUserDefaults]objectForKey:HHLocationCacheKey];
         return[NSKeyedUnarchiver unarchiveObjectWithData:data] ;
+=======
+        return [[NSUserDefaults standardUserDefaults]objectForKey:HHLocationCacheKey];
+>>>>>>> origin/master
     }
 }
 #pragma mark - updateLocation
@@ -291,20 +299,32 @@ static HHLocationManager *manager=nil;
     return self;
 }
 -(void)encodeWithCoder:(NSCoder *)aCoder{
+<<<<<<< HEAD
+=======
+//    kFastEncode(aCoder);
+>>>>>>> origin/master
     u_int count=0;
     objc_property_t *properties=class_copyPropertyList([self class], &count);
     for (int i=0; i<count; i++) {
         const char* pname=property_getName(properties[i]);
         NSString *key=[NSString stringWithUTF8String:pname];
         id value=[self valueForKey:key];
+<<<<<<< HEAD
         if ([self hasFoundationClass:[value class]]) {
             [aCoder encodeObject:value forKey:key];
         }
+=======
+        [aCoder encodeObject:value forKey:key];
+>>>>>>> origin/master
     }
     free(properties);
 }
 - (BOOL)hasFoundationClass:(Class)aClass{
+<<<<<<< HEAD
     NSArray *foundationClass=@[@"NSSting",@"NSNumber",@"NSValue",@"NSAttributedString",@"NSData",@"NSMutableData",@"NSMutableString",@"NSMutableAttributedString"];
+=======
+    NSArray *foundationClass=@[@""];
+>>>>>>> origin/master
     if ([foundationClass containsObject:NSStringFromClass(aClass)]) {
         return YES;
     }
