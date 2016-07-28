@@ -479,11 +479,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-<<<<<<< HEAD
-				PRODUCT_BUNDLE_IDENTIFIER = com.huanjiyou.push;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.hcHaoChe.push;
->>>>>>> origin/master
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
@@ -505,11 +501,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-<<<<<<< HEAD
-				PRODUCT_BUNDLE_IDENTIFIER = com.huanjiyou.push;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.hcHaoChe.push;
->>>>>>> origin/master
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
