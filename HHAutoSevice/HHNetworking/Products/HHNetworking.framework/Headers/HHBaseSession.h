@@ -16,22 +16,11 @@
  */
 typedef void (^HHSessionCompleteBlock)(id response,HHError *error);
 
-/**
- 请求错误code
- */
-typedef NS_ENUM(NSInteger, HHErrorCode) {
-    
-    HHErrorCodeNotConnectedToInternet   = NSURLErrorNotConnectedToInternet,
-    HHErrorCodeTimeout                  = NSURLErrorTimedOut,
-    HHErrorCodeNetworkConnectionLost    = NSURLErrorNetworkConnectionLost,
-    HHErrorCodeCannotConnectToHost      = NSURLErrorCannotConnectToHost,
-    
-    
-    HHErrorCodeSessionExpired = 0x003E9,
-    HHErrorCodeOther          = 0x007D1
-};
-
 @interface HHBaseSession : NSObject
+
+
+- (NSString *)urlWithPath:(NSString *)path;//通过此方法来转换最终URL
+
 /*!
  *  @method GET
  *  @params 
@@ -63,5 +52,31 @@ typedef NS_ENUM(NSInteger, HHErrorCode) {
  *  @return NSURLSessionDataTask
  */
 - (NSURLSessionDataTask *)JSON:(NSString *)url params:(NSDictionary *)dict complete:(HHSessionCompleteBlock)complt;
+/*!
+ *  @method JSON
+ *  @params
+ *      url:请求全路径
+ *      params:参数字典
+ *      complete:回调
+ *
+ *  @return NSURLSessionDataTask
+ */
+- (NSURLSessionDataTask *)FILE:(NSString *)url params:(NSDictionary *)dict files:(NSArray <HHFile *> *)files  complete:(HHSessionCompleteBlock)complt;
+
+/*!
+ *  @method 文件下载
+ *  @params
+        url:请求全路径
+        complete:回调
+        progress:进度
+ *  @return NSURLSessionDataTask
+ */
+
+- (NSURLSessionDataTask *)download:(NSString *)url complete:(HHSessionCompleteBlock)complt progress:(void(^)(float progress,long long totalBytes))progress;
+
+/*!
+ 取消所有请求
+ */
+-(void)cancleAllRequest;
 
 @end

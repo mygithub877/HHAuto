@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <HHKit/HHKit.h>
-
+#import <HHNetworking/HHNetworking.h>
 @interface DetailViewController : HHBaseViewController
 
 @property (strong, nonatomic) id detailItem;

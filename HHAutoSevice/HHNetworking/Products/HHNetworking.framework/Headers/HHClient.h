@@ -13,7 +13,6 @@
 @protocol HHShopSession;
 @protocol HHOrderSession;
 @protocol HHProductSession;
-@protocol HHMessageSession;
 
 @interface HHClient : NSObject
 
@@ -29,6 +28,5 @@
 @property (nonatomic, strong, readonly) id<HHOrderSession> orderSession;
 @property (nonatomic, strong, readonly) id<HHProductSession>productSession;
 
-@property (nonatomic, strong, readonly) id<HHMessageSession> messageSession;
 
 @end

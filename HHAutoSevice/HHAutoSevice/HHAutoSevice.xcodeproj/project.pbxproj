@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D5695C01D43335C0070F9DF /* HHKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5695BF1D43335C0070F9DF /* HHKit.framework */; };
 		0D5696051D4349510070F9DF /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5696041D4349510070F9DF /* libstdc++.tbd */; };
+		0D5696D31D4A44450070F9DF /* HHNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5696D21D4A44450070F9DF /* HHNetworking.framework */; };
 		EDE6DAEF1D3329AC00B33EAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DAEE1D3329AC00B33EAD /* main.m */; };
 		EDE6DAF21D3329AC00B33EAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DAF11D3329AC00B33EAD /* AppDelegate.m */; };
 		EDE6DAF51D3329AC00B33EAD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE6DAF41D3329AC00B33EAD /* MasterViewController.m */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		0D5695BF1D43335C0070F9DF /* HHKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HHKit.framework; path = ../../HHKit/Products/HHKit.framework; sourceTree = "<group>"; };
 		0D5696041D4349510070F9DF /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		0D5696D21D4A44450070F9DF /* HHNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HHNetworking.framework; path = ../../HHNetworking/Products/HHNetworking.framework; sourceTree = "<group>"; };
 		EDE6DAEA1D3329AC00B33EAD /* HHAutoSevice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHAutoSevice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE6DAEE1D3329AC00B33EAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EDE6DAF01D3329AC00B33EAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5696D31D4A44450070F9DF /* HHNetworking.framework in Frameworks */,
 				0D5696051D4349510070F9DF /* libstdc++.tbd in Frameworks */,
 				0D5695C01D43335C0070F9DF /* HHKit.framework in Frameworks */,
 			);
@@ -91,6 +94,7 @@
 		EDE6DAEC1D3329AC00B33EAD /* HHAutoSevice */ = {
 			isa = PBXGroup;
 			children = (
+				0D5696D21D4A44450070F9DF /* HHNetworking.framework */,
 				0D5695BF1D43335C0070F9DF /* HHKit.framework */,
 				EDE6DAF01D3329AC00B33EAD /* AppDelegate.h */,
 				EDE6DAF11D3329AC00B33EAD /* AppDelegate.m */,

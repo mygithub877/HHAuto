@@ -40,7 +40,6 @@
 		0D5696191D44C3510070F9DF /* HHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696171D44C3510070F9DF /* HHAlertView.m */; };
 		EDF5952E1D2F4D0600052039 /* HHKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF5952D1D2F4D0600052039 /* HHKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDF595351D2F4D0600052039 /* HHKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF5952A1D2F4D0600052039 /* HHKit.framework */; };
-		EDF5953A1D2F4D0600052039 /* HHKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF595391D2F4D0600052039 /* HHKitTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +74,6 @@
 		EDF5952D1D2F4D0600052039 /* HHKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHKit.h; sourceTree = "<group>"; };
 		EDF5952F1D2F4D0600052039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF595341D2F4D0600052039 /* HHKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDF595391D2F4D0600052039 /* HHKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHKitTests.m; sourceTree = "<group>"; };
-		EDF5953B1D2F4D0600052039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				EDF5952C1D2F4D0600052039 /* HHKit */,
-				EDF595381D2F4D0600052039 /* HHKitTests */,
 				EDF5952B1D2F4D0600052039 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -180,15 +176,6 @@
 				EDF5952F1D2F4D0600052039 /* Info.plist */,
 			);
 			path = HHKit;
-			sourceTree = "<group>";
-		};
-		EDF595381D2F4D0600052039 /* HHKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				EDF595391D2F4D0600052039 /* HHKitTests.m */,
-				EDF5953B1D2F4D0600052039 /* Info.plist */,
-			);
-			path = HHKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +330,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDF5953A1D2F4D0600052039 /* HHKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +465,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hcHaoChe.push;
+				PRODUCT_BUNDLE_IDENTIFIER = com.honghongauto.HHKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
@@ -501,7 +487,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hcHaoChe.push;
+				PRODUCT_BUNDLE_IDENTIFIER = com.honghongauto.HHKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
