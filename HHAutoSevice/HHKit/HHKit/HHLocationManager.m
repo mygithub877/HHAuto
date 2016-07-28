@@ -91,13 +91,14 @@ static HHLocationManager *manager=nil;
     _locationCache=location;
     NSData *archiver=[NSKeyedArchiver archivedDataWithRootObject:location];
     
-    [[NSUserDefaults standardUserDefaults] setObject:location forKey:HHLocationCacheKey];
+    [[NSUserDefaults standardUserDefaults] setObject:archiver forKey:HHLocationCacheKey];
 }
 -(HHLocation *)locationCache{
     if (_locationCache) {
         return _locationCache;
     }else{
-        return [[NSUserDefaults standardUserDefaults]objectForKey:HHLocationCacheKey];
+        NSData *data=[[NSUserDefaults standardUserDefaults]objectForKey:HHLocationCacheKey];
+        return[NSKeyedUnarchiver unarchiveObjectWithData:data] ;
     }
 }
 #pragma mark - updateLocation
@@ -275,24 +276,35 @@ static HHLocationManager *manager=nil;
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     if (self=[super init]) {
-        kFastDecoder(aDecoder);
+        u_int count=0;
+        objc_property_t *properties=class_copyPropertyList([self class], &count);
+        for (int i=0; i<count; i++) {
+            const char* pname=property_getName(properties[i]);
+            NSString *key=[NSString stringWithUTF8String:pname];
+            id value=[aDecoder decodeObjectForKey:key];
+            if (value && [self hasFoundationClass:[value class]]) {
+                [self setValue:value forKey:key];
+            }
+        }
+        free(properties);
     }
     return self;
 }
 -(void)encodeWithCoder:(NSCoder *)aCoder{
-//    kFastEncode(aCoder);
     u_int count=0;
     objc_property_t *properties=class_copyPropertyList([self class], &count);
     for (int i=0; i<count; i++) {
         const char* pname=property_getName(properties[i]);
         NSString *key=[NSString stringWithUTF8String:pname];
         id value=[self valueForKey:key];
-        [aCoder encodeObject:value forKey:key];
+        if ([self hasFoundationClass:[value class]]) {
+            [aCoder encodeObject:value forKey:key];
+        }
     }
     free(properties);
 }
 - (BOOL)hasFoundationClass:(Class)aClass{
-    NSArray *foundationClass=@[@""];
+    NSArray *foundationClass=@[@"NSSting",@"NSNumber",@"NSValue",@"NSAttributedString",@"NSData",@"NSMutableData",@"NSMutableString",@"NSMutableAttributedString"];
     if ([foundationClass containsObject:NSStringFromClass(aClass)]) {
         return YES;
     }
