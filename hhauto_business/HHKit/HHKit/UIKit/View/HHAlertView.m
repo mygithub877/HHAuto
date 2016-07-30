@@ -15,6 +15,8 @@
     UIAlertController *_alertController;
     
     NSInteger _buttonIndex;
+    
+    BOOL _isHasCancle;
 }
 -(void)initWithTitle:(NSString *)title message:(NSString *)msg showTarget:(UIViewController *)controller handle:(void (^)(NSInteger))clickButtonAtIndex cancle:(NSString *)cancle others:(NSString *)others, ...{
     _alertHandleBlock=[clickButtonAtIndex copy];
@@ -23,6 +25,7 @@
         __block int i=0;
         _alertController=[UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
         if (cancle) {
+            _isHasCancle=YES;
             i++;
             UIAlertAction *action=[UIAlertAction actionWithTitle:cancle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 if (clickButtonAtIndex) {

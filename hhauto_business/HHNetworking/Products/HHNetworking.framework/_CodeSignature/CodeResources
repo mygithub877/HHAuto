@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/HHAuthSession.h</key>
 		<data>
-		kwhwBIL/WMdQpFZNPEXAYqMD1c4=
+		YaQEHgn2FYwD29EV3XtoNbmhiI4=
 		</data>
 		<key>Headers/HHBaseSession.h</key>
 		<data>
-		eb5fOkjmodhX0f+xqjf32a/IZ84=
+		RnxVkGnVLdV5kumMCi3WPRoCuv8=
 		</data>
 		<key>Headers/HHClient.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/HHNetworking.h</key>
 		<data>
-		R4RiOB/pjTCiJCXnSXz6J7UfIN8=
+		pNxfjzOWlp2B76z7gOiA6MB+BXg=
 		</data>
 		<key>Headers/HHOrderSession.h</key>
 		<data>
@@ -44,9 +44,17 @@
 		<data>
 		tJRRDDyhkD6IhJcfpKanWAOIkek=
 		</data>
+		<key>Headers/HHShopService.h</key>
+		<data>
+		BuyDVYHG60kWiq/yW0Zmb9uW/vM=
+		</data>
 		<key>Headers/HHShopSession.h</key>
 		<data>
 		9NaqND6xR21zU9ybfawXYBU9+hE=
+		</data>
+		<key>Headers/HHShopType.h</key>
+		<data>
+		uwTsLQiBlVfSwK0kj5ZgxC0HEVc=
 		</data>
 		<key>Headers/HHUser.h</key>
 		<data>
@@ -54,7 +62,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yzR5lPshcbHKi+1LQwH96fdk1EQ=
+		r1DBc0v7knV4jke73PetZiAcmRM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,22 +75,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kwhwBIL/WMdQpFZNPEXAYqMD1c4=
+			YaQEHgn2FYwD29EV3XtoNbmhiI4=
 			</data>
 			<key>hash2</key>
 			<data>
-			HYi4I/1PuFgJ1fdcsiBb9US7m9/UQAUpeQMC2vLHSDo=
+			Ladyuujj5p5G5CBADYbK7UFiEv/NEaXzcdUoer04lz4=
 			</data>
 		</dict>
 		<key>Headers/HHBaseSession.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eb5fOkjmodhX0f+xqjf32a/IZ84=
+			RnxVkGnVLdV5kumMCi3WPRoCuv8=
 			</data>
 			<key>hash2</key>
 			<data>
-			N6HYLykDNBFe03VkjM3J7GszOMHGgjO9aToCNtF6RWA=
+			xB+eC4Wv70OmhshiBWWMd7xikDo3asnHJCW6n/bKu3s=
 			</data>
 		</dict>
 		<key>Headers/HHClient.h</key>
@@ -133,11 +141,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			R4RiOB/pjTCiJCXnSXz6J7UfIN8=
+			pNxfjzOWlp2B76z7gOiA6MB+BXg=
 			</data>
 			<key>hash2</key>
 			<data>
-			qgVjwE4TiO/hz2nfk3CASiObVKA0cp5y+IbJYzDQdHo=
+			GkFq8GoTboNRnG98Fl5Nw8KEohnJov4UpLEj34VdQWE=
 			</data>
 		</dict>
 		<key>Headers/HHOrderSession.h</key>
@@ -173,6 +181,17 @@
 			ud1h1UfKon9h/XkyVck02erAO+94RI/8VNyWBsZFnWo=
 			</data>
 		</dict>
+		<key>Headers/HHShopService.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BuyDVYHG60kWiq/yW0Zmb9uW/vM=
+			</data>
+			<key>hash2</key>
+			<data>
+			nwlgMRVFVp2Y9NgubGaaTAA313/bxXo8g7SSi2CMSTo=
+			</data>
+		</dict>
 		<key>Headers/HHShopSession.h</key>
 		<dict>
 			<key>hash</key>
@@ -182,6 +201,17 @@
 			<key>hash2</key>
 			<data>
 			7SXegFjEFHU4pGl1sLPoebeYiiC/EMQ4wqS6Q70oL60=
+			</data>
+		</dict>
+		<key>Headers/HHShopType.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uwTsLQiBlVfSwK0kj5ZgxC0HEVc=
+			</data>
+			<key>hash2</key>
+			<data>
+			WQLFfJgHFXxROTNVpBu77kQFAWi9vE6Xw0h7QaFo2NA=
 			</data>
 		</dict>
 		<key>Headers/HHUser.h</key>

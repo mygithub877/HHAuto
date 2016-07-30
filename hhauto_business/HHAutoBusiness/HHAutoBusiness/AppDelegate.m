@@ -21,9 +21,12 @@
     [self.window setBackgroundColor:[UIColor whiteColor]];
     
     HHBaseViewController *base=[[HHBaseViewController alloc] init];
+    HHNavigationController *nav=[[HHNavigationController alloc] initWithRootViewController:base];
+
+//    [[[HHBaseSession alloc] init] testEncriypt];
     
+    self.window.rootViewController=nav;
     
-    self.window.rootViewController=base;
     
     [self.window makeKeyAndVisible];
     return YES;

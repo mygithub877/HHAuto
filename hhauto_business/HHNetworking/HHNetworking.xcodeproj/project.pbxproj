@@ -72,6 +72,10 @@
 		0D5696D11D4A3B9C0070F9DF /* HHProductSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696CF1D4A3B9C0070F9DF /* HHProductSession.m */; };
 		0D5696D71D4A47950070F9DF /* HHMessageSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696D51D4A47950070F9DF /* HHMessageSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D5696D81D4A47950070F9DF /* HHMessageSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696D61D4A47950070F9DF /* HHMessageSession.m */; };
+		0D5696DB1D4B9D100070F9DF /* HHShopType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696D91D4B9D100070F9DF /* HHShopType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5696DC1D4B9D100070F9DF /* HHShopType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696DA1D4B9D100070F9DF /* HHShopType.m */; };
+		0D5696DF1D4B9DBF0070F9DF /* HHShopService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696DD1D4B9DBF0070F9DF /* HHShopService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5696E01D4B9DBF0070F9DF /* HHShopService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696DE1D4B9DBF0070F9DF /* HHShopService.m */; };
 		637ABE181D2E092500C0D8BB /* HHNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 637ABE171D2E092500C0D8BB /* HHNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED8961BB1D4B2CA100A2C031 /* NSString+HHURLEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8961B91D4B2CA100A2C031 /* NSString+HHURLEncrypt.h */; };
 		ED8961BC1D4B2CA100A2C031 /* NSString+HHURLEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8961BA1D4B2CA100A2C031 /* NSString+HHURLEncrypt.m */; };
@@ -158,6 +162,10 @@
 		0D5696D41D4A44E70070F9DF /* HHServerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHServerConfig.h; sourceTree = "<group>"; };
 		0D5696D51D4A47950070F9DF /* HHMessageSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHMessageSession.h; sourceTree = "<group>"; };
 		0D5696D61D4A47950070F9DF /* HHMessageSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHMessageSession.m; sourceTree = "<group>"; };
+		0D5696D91D4B9D100070F9DF /* HHShopType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHShopType.h; sourceTree = "<group>"; };
+		0D5696DA1D4B9D100070F9DF /* HHShopType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHShopType.m; sourceTree = "<group>"; };
+		0D5696DD1D4B9DBF0070F9DF /* HHShopService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHShopService.h; sourceTree = "<group>"; };
+		0D5696DE1D4B9DBF0070F9DF /* HHShopService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHShopService.m; sourceTree = "<group>"; };
 		637ABE141D2E092500C0D8BB /* HHNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HHNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		637ABE171D2E092500C0D8BB /* HHNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNetworking.h; sourceTree = "<group>"; };
 		637ABE191D2E092500C0D8BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -213,6 +221,10 @@
 			children = (
 				0D5696321D4A33380070F9DF /* HHUser.h */,
 				0D5696331D4A33380070F9DF /* HHUser.m */,
+				0D5696D91D4B9D100070F9DF /* HHShopType.h */,
+				0D5696DA1D4B9D100070F9DF /* HHShopType.m */,
+				0D5696DD1D4B9DBF0070F9DF /* HHShopService.h */,
+				0D5696DE1D4B9DBF0070F9DF /* HHShopService.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -412,6 +424,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5696DF1D4B9DBF0070F9DF /* HHShopService.h in Headers */,
+				0D5696DB1D4B9D100070F9DF /* HHShopType.h in Headers */,
 				ED8961BF1D4B37C100A2C031 /* HHSettlementSession.h in Headers */,
 				0D5696D71D4A47950070F9DF /* HHMessageSession.h in Headers */,
 				0D5696C81D4A3A370070F9DF /* HHShopSession.h in Headers */,
@@ -548,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D5696D11D4A3B9C0070F9DF /* HHProductSession.m in Sources */,
+				0D5696DC1D4B9D100070F9DF /* HHShopType.m in Sources */,
 				ED8961BC1D4B2CA100A2C031 /* NSString+HHURLEncrypt.m in Sources */,
 				ED8961C01D4B37C100A2C031 /* HHSettlementSession.m in Sources */,
 				0D5696821D4A33380070F9DF /* HHFile.m in Sources */,
@@ -557,6 +572,7 @@
 				0D5696C01D4A346B0070F9DF /* HHError.m in Sources */,
 				0D5696C51D4A38140070F9DF /* HHAuthSession.m in Sources */,
 				0D5696801D4A33380070F9DF /* HHUser.m in Sources */,
+				0D5696E01D4B9DBF0070F9DF /* HHShopService.m in Sources */,
 				0D5696D81D4A47950070F9DF /* HHMessageSession.m in Sources */,
 				0D56967D1D4A33380070F9DF /* HHClient.m in Sources */,
 			);

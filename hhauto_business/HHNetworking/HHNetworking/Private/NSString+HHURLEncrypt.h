@@ -31,7 +31,7 @@
 /**
  AES加密解密
  */
-- (NSString *)encryptAES:(NSString *)key;
-- (NSString *)decryptAES:(NSString *)key;
+- (NSString *)net_encryptAES:(NSString *)key;
+- (NSString *)net_decryptAES:(NSString *)key;
 
 @end

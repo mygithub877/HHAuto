@@ -8,6 +8,9 @@
 
 #import "HHClient.h"
 #import "HHInterface.h"
+
+static NSString *const HHUserCacheKey = @"HHUserCacheKey";
+
 @implementation HHClient
 
 @synthesize authSession=_authSession;
@@ -20,16 +23,26 @@
 
 @synthesize commonParams=_commonParams;
 @synthesize token=_token;
+@synthesize user=_user;
 
 + (instancetype)sharedInstance{
     static HHClient *instance=nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance=[[HHClient alloc] init];
+        
     });
     return instance;
 }
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(loginFinish:) name:kLoginFinishNotification object:nil];
+        _baseURL=kDefaultBaseURLString;
+    }
+    return self;
+}
 - (void)setToken:(NSString *)token{
     _token=token;
     NSMutableDictionary *params=[self mutalbaleCommonParams];
@@ -37,12 +50,24 @@
     _commonParams=[params copy];
     [[NSUserDefaults standardUserDefaults] setObject:token forKey:HH_AUTH_TOKEN];
 }
-
+- (void)loginFinish:(NSNotification *)notification{
+    HHUser *user=notification.object;
+    _user=user;
+    NSData *data=[NSKeyedArchiver archivedDataWithRootObject:user];
+    [[NSUserDefaults standardUserDefaults]setObject:data forKey:HHUserCacheKey];
+}
 - (NSString *)token{
     if (_token==nil) {
         _token=[[NSUserDefaults standardUserDefaults]objectForKey:HH_AUTH_TOKEN];
     }
     return _token;
+}
+- (HHUser *)user{
+    if (_user==nil) {
+        NSData *data=[[NSUserDefaults standardUserDefaults]objectForKey:HHUserCacheKey];
+        _user=[NSKeyedUnarchiver unarchiveObjectWithData:data];
+    }
+    return _user;
 }
 
 - (NSMutableDictionary *)mutalbaleCommonParams{

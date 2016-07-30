@@ -38,7 +38,11 @@
     _timeoutInterval=timeoutInterval;
     self.sessionManager.requestSerializer.timeoutInterval=timeoutInterval;
 }
-
+- (void)testEncriypt{
+    NSString *encriyptStr=@"otBqDCOylodw1wuL7LKFWMtablqH/3FIvV0vtB89xFXKZNyi19dkxEhGM8tCym8q4WwxOcfpH/HtcHx4TqT7Ig==";
+    NSString *decryptStr=[encriyptStr net_decryptAES:kAESKey];
+    FMWLog(@"%@",decryptStr);
+}
 #pragma mark -AFHTTPSessionManager: key-value request
 -(AFHTTPSessionManager *)sessionManager{
     if (_sessionManager==nil) {

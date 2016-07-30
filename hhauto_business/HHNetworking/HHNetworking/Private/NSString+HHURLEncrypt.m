@@ -40,9 +40,9 @@
     NSString* appVersion = infoDict[@"CFBundleShortVersionString"];
     return appVersion;
 }
--(NSString *)encryptAES:(NSString *)key{
+-(NSString *)net_encryptAES:(NSString *)key{
     NSData *strData=[self dataUsingEncoding:NSUTF8StringEncoding];
-    char keyPtr[kCCKeySizeAES256+1];
+    char keyPtr[kCCKeySizeAES256];
     bzero(keyPtr, sizeof(keyPtr));
     [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
     NSUInteger dataLength = [self length];
@@ -66,7 +66,7 @@
         return nil;
     }
 }
--(NSString *)decryptAES:(NSString *)key{
+-(NSString *)net_decryptAES:(NSString *)key{
     NSData *strData=[[NSData alloc] initWithBase64EncodedString:self options:NSDataBase64DecodingIgnoreUnknownCharacters];
     
     char keyPtr[kCCKeySizeAES256+1];
@@ -85,7 +85,9 @@
                                           &numBytesDecrypted);
     if (cryptStatus == kCCSuccess) {
         NSData *deData=[NSData dataWithBytesNoCopy:buffer length:numBytesDecrypted];
-        return [[NSString alloc] initWithData:deData encoding:NSUTF8StringEncoding];
+        NSString *rs=[[NSString alloc] initWithData:deData encoding:NSUTF8StringEncoding];
+        
+        return rs;
     }
     free(buffer);
     return nil;

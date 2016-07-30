@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D5697121D4C2EE20070F9DF /* HHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56970D1D4C2EE20070F9DF /* HHBaseViewController.m */; };
+		0D5697131D4C2EE20070F9DF /* HHBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56970F1D4C2EE20070F9DF /* HHBaseWebViewController.m */; };
+		0D5697141D4C2EE20070F9DF /* HHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5697111D4C2EE20070F9DF /* HHNavigationController.m */; };
 		75484B3F2EDA27F16735359F /* libPods-HHAutoBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C9070AD387C07954FA68E9 /* libPods-HHAutoBusiness.a */; };
 		85041E2E130ECDFAC7FFAF98 /* libPods-HHAutoBusinessTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C439E4FDAFB88F322816BF /* libPods-HHAutoBusinessTests.a */; };
 		ED8961641D49FBC300A2C031 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8961631D49FBC300A2C031 /* main.m */; };
@@ -31,6 +34,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D56970C1D4C2EE20070F9DF /* HHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseViewController.h; sourceTree = "<group>"; };
+		0D56970D1D4C2EE20070F9DF /* HHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseViewController.m; sourceTree = "<group>"; };
+		0D56970E1D4C2EE20070F9DF /* HHBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseWebViewController.h; sourceTree = "<group>"; };
+		0D56970F1D4C2EE20070F9DF /* HHBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseWebViewController.m; sourceTree = "<group>"; };
+		0D5697101D4C2EE20070F9DF /* HHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHNavigationController.h; sourceTree = "<group>"; };
+		0D5697111D4C2EE20070F9DF /* HHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHNavigationController.m; sourceTree = "<group>"; };
+		0D5697161D4CAFDF0070F9DF /* HHColorConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHColorConfig.h; sourceTree = "<group>"; };
+		0D5697171D4CAFED0070F9DF /* HHFontConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHFontConfig.h; sourceTree = "<group>"; };
+		0D5697181D4CB2F60070F9DF /* HHNotificationConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNotificationConfig.h; sourceTree = "<group>"; };
+		0D5697191D4CB3250070F9DF /* HHGloabConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHGloabConfig.h; sourceTree = "<group>"; };
 		37521CBF2B5CF7E4C980F02B /* Pods-HHAutoBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHAutoBusiness.release.xcconfig"; path = "../Pods/Target Support Files/Pods-HHAutoBusiness/Pods-HHAutoBusiness.release.xcconfig"; sourceTree = "<group>"; };
 		3A9C85548ECCAE7943B7B0CF /* Pods-HHAutoBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHAutoBusiness.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-HHAutoBusiness/Pods-HHAutoBusiness.debug.xcconfig"; sourceTree = "<group>"; };
 		45C9070AD387C07954FA68E9 /* libPods-HHAutoBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HHAutoBusiness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D5697151D4CAFB50070F9DF /* ConstConfig */ = {
+			isa = PBXGroup;
+			children = (
+				0D5697161D4CAFDF0070F9DF /* HHColorConfig.h */,
+				0D5697171D4CAFED0070F9DF /* HHFontConfig.h */,
+				0D5697181D4CB2F60070F9DF /* HHNotificationConfig.h */,
+				0D5697191D4CB3250070F9DF /* HHGloabConfig.h */,
+			);
+			path = ConstConfig;
+			sourceTree = "<group>";
+		};
 		DB428C526CFE6CBEE1F3474F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +180,7 @@
 		ED8961C11D4B3DDF00A2C031 /* HHClasses */ = {
 			isa = PBXGroup;
 			children = (
+				0D5697151D4CAFB50070F9DF /* ConstConfig */,
 				ED8961C21D4B3DDF00A2C031 /* Category */,
 				ED8961C61D4B3DDF00A2C031 /* Controller */,
 				ED8961D01D4B3DDF00A2C031 /* Model */,
@@ -223,6 +248,12 @@
 		ED8961C81D4B3DDF00A2C031 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0D56970C1D4C2EE20070F9DF /* HHBaseViewController.h */,
+				0D56970D1D4C2EE20070F9DF /* HHBaseViewController.m */,
+				0D56970E1D4C2EE20070F9DF /* HHBaseWebViewController.h */,
+				0D56970F1D4C2EE20070F9DF /* HHBaseWebViewController.m */,
+				0D5697101D4C2EE20070F9DF /* HHNavigationController.h */,
+				0D5697111D4C2EE20070F9DF /* HHNavigationController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -647,7 +678,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5697141D4C2EE20070F9DF /* HHNavigationController.m in Sources */,
+				0D5697131D4C2EE20070F9DF /* HHBaseWebViewController.m in Sources */,
 				ED8961671D49FBC300A2C031 /* AppDelegate.m in Sources */,
+				0D5697121D4C2EE20070F9DF /* HHBaseViewController.m in Sources */,
 				ED8961641D49FBC300A2C031 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

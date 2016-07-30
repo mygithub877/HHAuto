@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HHUser : NSObject
+@interface HHUser : NSObject <NSCoding>
+@property (nonatomic, strong) NSNumber *uid;
+@property (nonatomic, strong) NSString *phone;
 
 @end

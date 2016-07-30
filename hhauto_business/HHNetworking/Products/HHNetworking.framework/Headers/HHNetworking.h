@@ -28,6 +28,9 @@ FOUNDATION_EXPORT const unsigned char HHNetworkingVersionString[];
 #import "HHFile.h"
 #import "HHUser.h"
 
+#import "HHShopType.h"
+#import "HHShopService.h"
+
 
 #import "HHBaseSession.h"
 #import "HHAuthSession.h"

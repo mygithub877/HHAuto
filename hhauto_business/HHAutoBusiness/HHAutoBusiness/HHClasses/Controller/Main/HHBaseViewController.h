@@ -96,8 +96,21 @@
 /*!
  *  显示一个不带菊花的提示性HUD,自动hide
  *  如果迭代多个则按队列出现和影藏
+ *  只显示文字,没有图片
  */
-- (MBProgressHUD *)showToastHUD:(NSString *)text;
+- (void)showToastHUD:(NSString *)text complete:(void (^)())complete;
+/*!
+ *  显示成功提示框,自动hide
+ *  如果迭代多个则按队列出现和影藏
+ *  显示文字和图片
+ */
+- (void)showSuccessToast:(NSString *)text complete:(void (^)())complete;
+/*!
+ *  显示失败提示框,自动hide
+ *  如果迭代多个则按队列出现和影藏
+ *  显示文字和图片
+ */
+- (void)showFailToast:(NSString *)text complete:(void (^)())complete;
 
 /*!
  *  影藏HUD,适用于不能自动影藏的HUD

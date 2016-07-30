@@ -10,4 +10,8 @@
 
 @interface HHBaseWebViewController : HHBaseViewController
 
+@property (nonatomic, strong) NSURL *url;
+
+- (instancetype)initWithURL:(NSURL *)url;
+
 @end

@@ -23,6 +23,20 @@
 /* Begin PBXBuildFile section */
 		0D5695FF1D4347C70070F9DF /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5695FB1D4347C70070F9DF /* MBProgressHUD.h */; };
 		0D5696031D4348290070F9DF /* PrivateHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696021D4348290070F9DF /* PrivateHeader.h */; };
+		0D5696E81D4BA5270070F9DF /* NSString+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696E61D4BA5270070F9DF /* NSString+Util.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5696E91D4BA5270070F9DF /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696E71D4BA5270070F9DF /* NSString+Util.m */; };
+		0D5696EC1D4BA5360070F9DF /* UIView+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696EA1D4BA5360070F9DF /* UIView+Util.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5696ED1D4BA5360070F9DF /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696EB1D4BA5360070F9DF /* UIView+Util.m */; };
+		0D5696F01D4BA5450070F9DF /* UIImage+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696EE1D4BA5450070F9DF /* UIImage+Util.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5696F11D4BA5450070F9DF /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696EF1D4BA5450070F9DF /* UIImage+Util.m */; };
+		0D5696F41D4BAA3C0070F9DF /* NSObject+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696F21D4BAA3C0070F9DF /* NSObject+Util.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5696F51D4BAA3C0070F9DF /* NSObject+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696F31D4BAA3C0070F9DF /* NSObject+Util.m */; };
+		0D5696FC1D4BAB440070F9DF /* NSArray+Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696F61D4BAB440070F9DF /* NSArray+Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5696FD1D4BAB440070F9DF /* NSArray+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696F71D4BAB440070F9DF /* NSArray+Common.m */; };
+		0D5696FE1D4BAB440070F9DF /* NSDictionary+SafeData.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696F81D4BAB440070F9DF /* NSDictionary+SafeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5696FF1D4BAB440070F9DF /* NSDictionary+SafeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696F91D4BAB440070F9DF /* NSDictionary+SafeData.m */; };
+		0D5697001D4BAB440070F9DF /* NSMutableArray+Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696FA1D4BAB440070F9DF /* NSMutableArray+Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5697011D4BAB440070F9DF /* NSMutableArray+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696FB1D4BAB440070F9DF /* NSMutableArray+Common.m */; };
 		ED8961A31D4ADE8D00A2C031 /* HHCPUUsage.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8961911D4ADE8D00A2C031 /* HHCPUUsage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED8961A41D4ADE8D00A2C031 /* HHCPUUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8961921D4ADE8D00A2C031 /* HHCPUUsage.m */; };
 		ED8961A51D4ADE8D00A2C031 /* HHMemoryInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8961931D4ADE8D00A2C031 /* HHMemoryInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,14 +45,10 @@
 		ED8961A81D4ADE8D00A2C031 /* HHSystemInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = ED8961961D4ADE8D00A2C031 /* HHSystemInfo.mm */; };
 		ED8961A91D4ADE8D00A2C031 /* HHLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8961981D4ADE8D00A2C031 /* HHLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED8961AA1D4ADE8D00A2C031 /* HHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8961991D4ADE8D00A2C031 /* HHLocationManager.m */; };
-		ED8961AB1D4ADE8D00A2C031 /* HHBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ED89619C1D4ADE8D00A2C031 /* HHBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED8961AC1D4ADE8D00A2C031 /* HHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED89619D1D4ADE8D00A2C031 /* HHBaseViewController.m */; };
 		ED8961AD1D4ADE8D00A2C031 /* HHAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = ED89619F1D4ADE8D00A2C031 /* HHAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED8961AE1D4ADE8D00A2C031 /* HHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8961A01D4ADE8D00A2C031 /* HHAlertView.m */; };
 		ED8961AF1D4ADE8D00A2C031 /* HHBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8961A11D4ADE8D00A2C031 /* HHBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED8961B01D4ADE8D00A2C031 /* HHBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8961A21D4ADE8D00A2C031 /* HHBlurView.m */; };
-		ED8961B71D4ADF1800A2C031 /* HHBaseWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8961B51D4ADF1800A2C031 /* HHBaseWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED8961B81D4ADF1800A2C031 /* HHBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8961B61D4ADF1800A2C031 /* HHBaseWebViewController.m */; };
 		EDF5952E1D2F4D0600052039 /* HHKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF5952D1D2F4D0600052039 /* HHKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDF595351D2F4D0600052039 /* HHKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF5952A1D2F4D0600052039 /* HHKit.framework */; };
 		EDF5953A1D2F4D0600052039 /* HHKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF595391D2F4D0600052039 /* HHKitTests.m */; };
@@ -58,6 +68,20 @@
 		0D5695FB1D4347C70070F9DF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		0D5695FC1D4347C70070F9DF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		0D5696021D4348290070F9DF /* PrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateHeader.h; sourceTree = "<group>"; };
+		0D5696E61D4BA5270070F9DF /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
+		0D5696E71D4BA5270070F9DF /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
+		0D5696EA1D4BA5360070F9DF /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
+		0D5696EB1D4BA5360070F9DF /* UIView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Util.m"; sourceTree = "<group>"; };
+		0D5696EE1D4BA5450070F9DF /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
+		0D5696EF1D4BA5450070F9DF /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
+		0D5696F21D4BAA3C0070F9DF /* NSObject+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Util.h"; sourceTree = "<group>"; };
+		0D5696F31D4BAA3C0070F9DF /* NSObject+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Util.m"; sourceTree = "<group>"; };
+		0D5696F61D4BAB440070F9DF /* NSArray+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Common.h"; sourceTree = "<group>"; };
+		0D5696F71D4BAB440070F9DF /* NSArray+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Common.m"; sourceTree = "<group>"; };
+		0D5696F81D4BAB440070F9DF /* NSDictionary+SafeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeData.h"; sourceTree = "<group>"; };
+		0D5696F91D4BAB440070F9DF /* NSDictionary+SafeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeData.m"; sourceTree = "<group>"; };
+		0D5696FA1D4BAB440070F9DF /* NSMutableArray+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Common.h"; sourceTree = "<group>"; };
+		0D5696FB1D4BAB440070F9DF /* NSMutableArray+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Common.m"; sourceTree = "<group>"; };
 		ED8961911D4ADE8D00A2C031 /* HHCPUUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHCPUUsage.h; sourceTree = "<group>"; };
 		ED8961921D4ADE8D00A2C031 /* HHCPUUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHCPUUsage.m; sourceTree = "<group>"; };
 		ED8961931D4ADE8D00A2C031 /* HHMemoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHMemoryInfo.h; sourceTree = "<group>"; };
@@ -66,14 +90,10 @@
 		ED8961961D4ADE8D00A2C031 /* HHSystemInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HHSystemInfo.mm; sourceTree = "<group>"; };
 		ED8961981D4ADE8D00A2C031 /* HHLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHLocationManager.h; sourceTree = "<group>"; };
 		ED8961991D4ADE8D00A2C031 /* HHLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHLocationManager.m; sourceTree = "<group>"; };
-		ED89619C1D4ADE8D00A2C031 /* HHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseViewController.h; sourceTree = "<group>"; };
-		ED89619D1D4ADE8D00A2C031 /* HHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseViewController.m; sourceTree = "<group>"; };
 		ED89619F1D4ADE8D00A2C031 /* HHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAlertView.h; sourceTree = "<group>"; };
 		ED8961A01D4ADE8D00A2C031 /* HHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAlertView.m; sourceTree = "<group>"; };
 		ED8961A11D4ADE8D00A2C031 /* HHBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBlurView.h; sourceTree = "<group>"; };
 		ED8961A21D4ADE8D00A2C031 /* HHBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBlurView.m; sourceTree = "<group>"; };
-		ED8961B51D4ADF1800A2C031 /* HHBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseWebViewController.h; sourceTree = "<group>"; };
-		ED8961B61D4ADF1800A2C031 /* HHBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseWebViewController.m; sourceTree = "<group>"; };
 		EDF5952A1D2F4D0600052039 /* HHKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HHKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF5952D1D2F4D0600052039 /* HHKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHKit.h; sourceTree = "<group>"; };
 		EDF5952F1D2F4D0600052039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,9 +146,23 @@
 			path = Private;
 			sourceTree = "<group>";
 		};
-		ED89618B1D4ADE8D00A2C031 /* Category */ = {
+		0D5696E51D4BA5170070F9DF /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				0D5696EE1D4BA5450070F9DF /* UIImage+Util.h */,
+				0D5696EF1D4BA5450070F9DF /* UIImage+Util.m */,
+				0D5696EA1D4BA5360070F9DF /* UIView+Util.h */,
+				0D5696EB1D4BA5360070F9DF /* UIView+Util.m */,
+				0D5696E61D4BA5270070F9DF /* NSString+Util.h */,
+				0D5696E71D4BA5270070F9DF /* NSString+Util.m */,
+				0D5696F21D4BAA3C0070F9DF /* NSObject+Util.h */,
+				0D5696F31D4BAA3C0070F9DF /* NSObject+Util.m */,
+				0D5696F61D4BAB440070F9DF /* NSArray+Common.h */,
+				0D5696F71D4BAB440070F9DF /* NSArray+Common.m */,
+				0D5696F81D4BAB440070F9DF /* NSDictionary+SafeData.h */,
+				0D5696F91D4BAB440070F9DF /* NSDictionary+SafeData.m */,
+				0D5696FA1D4BAB440070F9DF /* NSMutableArray+Common.h */,
+				0D5696FB1D4BAB440070F9DF /* NSMutableArray+Common.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -200,10 +234,6 @@
 		ED89619B1D4ADE8D00A2C031 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				ED89619C1D4ADE8D00A2C031 /* HHBaseViewController.h */,
-				ED89619D1D4ADE8D00A2C031 /* HHBaseViewController.m */,
-				ED8961B51D4ADF1800A2C031 /* HHBaseWebViewController.h */,
-				ED8961B61D4ADF1800A2C031 /* HHBaseWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,7 +270,7 @@
 		EDF5952C1D2F4D0600052039 /* HHKit */ = {
 			isa = PBXGroup;
 			children = (
-				ED89618B1D4ADE8D00A2C031 /* Category */,
+				0D5696E51D4BA5170070F9DF /* Category */,
 				ED89618C1D4ADE8D00A2C031 /* Foundation  */,
 				ED89619A1D4ADE8D00A2C031 /* UIKit */,
 				0D5696011D4348290070F9DF /* Private */,
@@ -267,13 +297,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5696F01D4BA5450070F9DF /* UIImage+Util.h in Headers */,
+				0D5696FC1D4BAB440070F9DF /* NSArray+Common.h in Headers */,
+				0D5697001D4BAB440070F9DF /* NSMutableArray+Common.h in Headers */,
+				0D5696F41D4BAA3C0070F9DF /* NSObject+Util.h in Headers */,
+				0D5696FE1D4BAB440070F9DF /* NSDictionary+SafeData.h in Headers */,
+				0D5696E81D4BA5270070F9DF /* NSString+Util.h in Headers */,
+				0D5696EC1D4BA5360070F9DF /* UIView+Util.h in Headers */,
 				ED8961A51D4ADE8D00A2C031 /* HHMemoryInfo.h in Headers */,
 				ED8961AF1D4ADE8D00A2C031 /* HHBlurView.h in Headers */,
 				ED8961A71D4ADE8D00A2C031 /* HHSystemInfo.h in Headers */,
 				ED8961A91D4ADE8D00A2C031 /* HHLocationManager.h in Headers */,
-				ED8961B71D4ADF1800A2C031 /* HHBaseWebViewController.h in Headers */,
 				ED8961AD1D4ADE8D00A2C031 /* HHAlertView.h in Headers */,
-				ED8961AB1D4ADE8D00A2C031 /* HHBaseViewController.h in Headers */,
 				ED8961A31D4ADE8D00A2C031 /* HHCPUUsage.h in Headers */,
 				0D5696031D4348290070F9DF /* PrivateHeader.h in Headers */,
 				0D5695FF1D4347C70070F9DF /* MBProgressHUD.h in Headers */,
@@ -389,7 +424,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n\n# 最后合成framework的文件目录\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# 编译完成后生成的真机环境和模拟器环境的framework文件目录\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n\n# 编译真机环境和模拟器环境\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\n\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n#xcodebuild -target \"HHNetworking\" -configuration \"Release\" -project \"HHNetworking.xcodeproj\" -sdk iphonesimulator ARCHS=\"i386 x86_64\" VALID_ARCHS=\"i386 x86_64\" clean build\n\n#xcodebuild -target \"HHNetworking\" -configuration \"Release\" -project \"HHNetworking.xcodeproj\" -sdk iphoneos ARCHS=\"armv7 armv7s arm64\" VALID_ARCHS=\"armv7 armv7s arm64\" clean build\n# 将旧的framework删掉\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\n# 创建一个新的framework文件目录\nmkdir -p \"${INSTALL_DIR}\"\n\n# 将真机环境下编译完成的framework copy到最后合成的目录下\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# 将真机环境下的framework和模拟器环境下的framework合并 (i386 + armv6/armv7) 生成最终的文件\n\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\nrm -r \"${WRK_DIR}\"\n#打开合成的framework\n\n#open \"${INSTALL_DIR}\"\n\n\n";
+			shellScript = "# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n\n# 最后合成framework的文件目录\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n\n# 编译完成后生成的真机环境和模拟器环境的framework文件目录\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n\n# 编译真机环境和模拟器环境\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\n\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n#xcodebuild -target \"HHNetworking\" -configuration \"Release\" -project \"HHNetworking.xcodeproj\" -sdk iphonesimulator ARCHS=\"i386 x86_64\" VALID_ARCHS=\"i386 x86_64\" clean build\n\n#xcodebuild -target \"HHNetworking\" -configuration \"Release\" -project \"HHNetworking.xcodeproj\" -sdk iphoneos ARCHS=\"armv7 armv7s arm64\" VALID_ARCHS=\"armv7 armv7s arm64\" clean build\n# 将旧的framework删掉\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\n# 创建一个新的framework文件目录\nmkdir -p \"${INSTALL_DIR}\"\n\n# 将真机环境下编译完成的framework copy到最后合成的目录下\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# 将真机环境下的framework和模拟器环境下的framework合并 (i386 + armv6/armv7) 生成最终的文件\n\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\n\n#rm -r \"${WRK_DIR}\"\n#打开合成的framework\n\n#open \"${INSTALL_DIR}\"\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -398,13 +433,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5696ED1D4BA5360070F9DF /* UIView+Util.m in Sources */,
+				0D5696F11D4BA5450070F9DF /* UIImage+Util.m in Sources */,
 				ED8961A81D4ADE8D00A2C031 /* HHSystemInfo.mm in Sources */,
-				ED8961AC1D4ADE8D00A2C031 /* HHBaseViewController.m in Sources */,
+				0D5696FF1D4BAB440070F9DF /* NSDictionary+SafeData.m in Sources */,
+				0D5697011D4BAB440070F9DF /* NSMutableArray+Common.m in Sources */,
 				ED8961A41D4ADE8D00A2C031 /* HHCPUUsage.m in Sources */,
 				ED8961AA1D4ADE8D00A2C031 /* HHLocationManager.m in Sources */,
-				ED8961B81D4ADF1800A2C031 /* HHBaseWebViewController.m in Sources */,
+				0D5696E91D4BA5270070F9DF /* NSString+Util.m in Sources */,
+				0D5696F51D4BAA3C0070F9DF /* NSObject+Util.m in Sources */,
 				ED8961A61D4ADE8D00A2C031 /* HHMemoryInfo.m in Sources */,
 				ED8961AE1D4ADE8D00A2C031 /* HHAlertView.m in Sources */,
+				0D5696FD1D4BAB440070F9DF /* NSArray+Common.m in Sources */,
 				ED8961B01D4ADE8D00A2C031 /* HHBlurView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,8 +599,8 @@
 		EDF595401D2F4D0600052039 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

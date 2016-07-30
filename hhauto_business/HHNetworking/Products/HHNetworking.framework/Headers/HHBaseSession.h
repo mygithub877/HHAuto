@@ -21,6 +21,7 @@ typedef void (^HHSessionCompleteBlock)(id response,HHError *error);
 @property (nonatomic, assign) NSTimeInterval  timeoutInterval;
 - (NSString *)urlWithPath:(NSString *)path;//通过此方法来转换最终URL
 
+- (void)testEncriypt;
 /*!
  *  @method GET
  *  @params 
