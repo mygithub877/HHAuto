@@ -13,6 +13,12 @@
 #else
     #import "sqlite3.h"
 #endif
+#if  DEBUG
+#define DBLOG(id, ...) NSLog((@"%s [Line %d] " id),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define DBLOG(id, ...)
+#endif
+
 
 @interface HHSQLiteCache()
 {
@@ -68,14 +74,52 @@
 }
 #pragma mark - SQLite
 - (void)_initilizeDataBase{
-    
-}
-- (BOOL)_dbOpen {
+    NSString *sql = @"create table if not exists hhautocache (key text,size integer, cache_data blob, modification_time integer, primary key(key));";
+    return [self _dbExecute:sql];
 
 }
+- (BOOL)_dbOpen {
+    if (_db) return YES;
+    int result = sqlite3_open(_path.UTF8String, &_db);
+    return (result == SQLITE_OK);
+}
 - (BOOL)_dbClose {
+    if (!_db) return YES;
+    int  result = 0;
+    BOOL retry = NO;
+    BOOL stmtFinalized = NO;
+
+    do {
+        retry = NO;
+        result = sqlite3_close(_db);
+        if (result == SQLITE_BUSY || result == SQLITE_LOCKED) {
+            if (!stmtFinalized) {
+                stmtFinalized = YES;
+                sqlite3_stmt *stmt;
+                while ((stmt = sqlite3_next_stmt(_db, nil)) != 0) {
+                    sqlite3_finalize(stmt);
+                    retry = YES;
+                }
+            }
+        } else if (result != SQLITE_OK) {
+            DBLOG(@"sqlite exec error (%d): %s", result, error);
+        }
+    } while (retry);
+    _db = NULL;
+    return YES;
 
 }
 - (BOOL)_dbExecute:(NSString *)sql {
+    if (sql.length == 0) return NO;
+    if (![self _dbCheck]) return NO;
+    
+    char *error = NULL;
+    int result = sqlite3_exec(_db, sql.UTF8String, NULL, NULL, &error);
+    if (error) {
+        DBLOG(@"sqlite exec error (%d): %s", result, error);
+        sqlite3_free(error);
+    }
+    
+    return result == SQLITE_OK;
 }
 @end
