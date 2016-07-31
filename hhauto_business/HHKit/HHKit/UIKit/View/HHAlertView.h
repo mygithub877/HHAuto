@@ -15,9 +15,10 @@
  */
 - (void)initWithTitle:(NSString *)title
                message:(NSString *)msg
-           showTarget:(UIViewController *)controller
+           showTarget:(UIViewController *)controller/* ios8以上需要传入,如果是nil则使用iOS7以下的方式弹出*/
                 handle:(void (^)(NSInteger index))clickButtonAtIndex
                 cancle:(NSString *)cancle
                 others:(NSString *)others, ... NS_REQUIRES_NIL_TERMINATION;
+
 - (void)addButtonTitle:(NSString *)title;
 @end

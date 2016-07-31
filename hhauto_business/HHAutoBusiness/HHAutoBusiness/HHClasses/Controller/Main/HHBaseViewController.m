@@ -224,7 +224,7 @@
     }
     [self showAlertTitle:@"title" message:@"message" handle:^(NSInteger index) {
         HHLog(@"index:%ld",index);
-    } cancle:@"取消" others:@"确定",@"3",@"4",nil];
+    } cancle:@"取消" others:@"确定",nil];
 
 }
 

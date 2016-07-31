@@ -17,22 +17,24 @@
     NSInteger _buttonIndex;
     
     BOOL _isHasCancle;
+    int _blockReferenceVariable;
 }
 -(void)initWithTitle:(NSString *)title message:(NSString *)msg showTarget:(UIViewController *)controller handle:(void (^)(NSInteger))clickButtonAtIndex cancle:(NSString *)cancle others:(NSString *)others, ...{
     _alertHandleBlock=[clickButtonAtIndex copy];
 
-    if ([self iosVersion] >= 8.0) {
-        __block int i=0;
+    if ([self iosVersion] >= 8.0 && controller) {
+//        __block int i=0;
         _alertController=[UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
         if (cancle) {
             _isHasCancle=YES;
-            i++;
+//            i++;
+            _blockReferenceVariable++;
             UIAlertAction *action=[UIAlertAction actionWithTitle:cancle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                 if (clickButtonAtIndex) {
-                    if (i==2) {
+                    if (_blockReferenceVariable==2) {
                         [self buttonClickIndex:0 complete:clickButtonAtIndex];
                     }else{
-                        [self buttonClickIndex:i-1 complete:clickButtonAtIndex];
+                        [self buttonClickIndex:_blockReferenceVariable-1 complete:clickButtonAtIndex];
                     }
                 }
             }];
@@ -40,10 +42,10 @@
         }
         
         if (others) {
-            i++;
+            _blockReferenceVariable++;
             UIAlertAction *action=[UIAlertAction actionWithTitle:others style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 if (clickButtonAtIndex) {
-                    if (i==2&&cancle) {
+                    if (_blockReferenceVariable==2&&cancle) {
                         [self buttonClickIndex:1 complete:clickButtonAtIndex];
                     }else{
                         [self buttonClickIndex:0 complete:clickButtonAtIndex];
@@ -55,9 +57,9 @@
         id eachObject;
         va_list args;
         va_start(args, others);
-        int k=i;
+        int k=_blockReferenceVariable;
         while ((eachObject=va_arg(args, id))) {
-            i++;
+            _blockReferenceVariable++;
             k++;
             UIAlertAction *action=[UIAlertAction actionWithTitle:eachObject style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 if (clickButtonAtIndex) {
@@ -93,6 +95,7 @@
 - (void)addButtonTitle:(NSString *)title {
     if ([self iosVersion] >= 8.0) {
         _buttonIndex++;
+        _blockReferenceVariable++;
         int i=_buttonIndex;
         UIAlertAction *action=[UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self buttonClickIndex:i complete:_alertHandleBlock];
