@@ -19,11 +19,21 @@
 #define DBLOG(id, ...)
 #endif
 
+#define HH_CACHE_SQL_TABLE_NAME     @"t_hhauto_cache"
+#define HH_CACHE_SQL_FIELD_KEY      @"cache_key"
+#define HH_CACHE_SQL_FIELD_SIZE     @"cache_size"
+#define HH_CACHE_SQL_FIELD_DATA     @"cache_data"
+#define HH_CACHE_SQL_FIELD_TIME     @"modification_time"
+
+
+
+
 
 @interface HHSQLiteCache()
 {
     sqlite3 *_db;
     CFMutableDictionaryRef _dbStmtCache;
+    dispatch_queue_t _dbQueue;
 
 
 }
@@ -36,6 +46,7 @@
 - (instancetype)initWithPath:(NSString *)path{
     if (self=[super init]) {
         _path=path;
+        [self _initilizeDataBase];
     }
     return self;
 }
@@ -54,29 +65,32 @@
  *  保存或替换二进制数据对象
  */
 - (BOOL)saveData:(NSData *)data forKey:(NSString *)key{
-    return NO;
+    return [self _dbInsertData:data modifyTime:[[NSDate date] timeIntervalSince1970] forKey:key];
 }
 /**
  *  获取二进制数据对象
  */
 - (NSData *)dataForKey:(NSString *)key{
-    return nil;
+    return [self _queryDataForKey:key];
 }
 /**
  *  移除二进制数据对象
  */
 - (BOOL)removeDataForKey:(NSString *)key{
-    return NO;
+    return [self _dbDeleteDataForKey:key];
 }
 /**
  *  移除所有二进制数据对象
  */
 - (BOOL)removeAllData{
-    return NO;
+    return [self _dbDeleteAllData];
 }
 #pragma mark - SQLite
 - (void)_initilizeDataBase{
-    NSString *sql = @"create table if not exists hhautocache (key text,size integer, cache_data blob, modification_time integer, primary key(key));";
+    
+    NSString *sql=[NSString stringWithFormat:@"create table if not exists %@(%@ text,%@ integer,%@ blob, %@ integer,primary key(%@))",HH_CACHE_SQL_TABLE_NAME,HH_CACHE_SQL_FIELD_KEY,HH_CACHE_SQL_FIELD_SIZE,HH_CACHE_SQL_FIELD_DATA,HH_CACHE_SQL_FIELD_TIME,HH_CACHE_SQL_FIELD_KEY];
+    [self _dbOpen];
+
     [self _dbExecute:sql];
 
 }
@@ -87,6 +101,7 @@
         CFDictionaryKeyCallBacks keyCallbacks = kCFCopyStringDictionaryKeyCallBacks;
         CFDictionaryValueCallBacks valueCallbacks = {0};
         _dbStmtCache = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0, &keyCallbacks, &valueCallbacks);
+        DBLOG(@"SQLite database path:%@",_path);
         return YES;
     }else{
         _db = NULL;
@@ -116,7 +131,7 @@
                 }
             }
         } else if (result != SQLITE_OK) {
-//            DBLOG(@"sqlite exec error (%d): %s", result, error);
+            DBLOG(@"sqlite exec error (%d): %s", result, sqlite3_errmsg(_db));
         }
     } while (retry);
     _db = NULL;
@@ -142,7 +157,7 @@
     if (!stmt) {
         int result = sqlite3_prepare_v2(_db, sql.UTF8String, -1, &stmt, NULL);
         if (result != SQLITE_OK) {
-//            DBLOG(@"sqlite stmt prepare error (%d): %s", result, error);
+            DBLOG(@"sqlite stmt prepare error (%d): %s", result, sqlite3_errmsg(_db));
             return NULL;
         }
         CFDictionarySetValue(_dbStmtCache, (__bridge const void *)(sql), stmt);
@@ -153,35 +168,71 @@
 }
 
 - (BOOL)_dbInsertData:(NSData *)data modifyTime:(NSInteger)timestamp forKey:(NSString *)key{
-    NSString *sql = @"insert or replace into hhautocache (key, size, cache_data, modification_time) values (?1, ?2, ?3, ?4);";
+    NSString *sql=[NSString stringWithFormat:@"insert or replace into %@(%@,%@,%@,%@) values(?1,?2,?3,?4)",HH_CACHE_SQL_TABLE_NAME,HH_CACHE_SQL_FIELD_KEY,HH_CACHE_SQL_FIELD_SIZE,HH_CACHE_SQL_FIELD_DATA,HH_CACHE_SQL_FIELD_TIME];
     sqlite3_stmt *stmt=[self _dbPrepareStmt:sql];
     if (!stmt) return NO;
     sqlite3_bind_text(stmt, 1, key.UTF8String, -1, NULL);
     sqlite3_bind_int(stmt, 2, (int)data.length);
     sqlite3_bind_blob(stmt, 3, data.bytes, (int)data.length, 0);
-    sqlite3_bind_int(stmt, 4, timestamp);
+    sqlite3_bind_int64(stmt, 4, timestamp);
     int result = sqlite3_step(stmt);
     if (result != SQLITE_DONE) {
-//        DBLOG(@"sqlite insert error (%d): %s", result, error);
+        DBLOG(@"sqlite insert error (%d): %s", result, sqlite3_errmsg(_db));
         return NO;
+    }else{
+        DBLOG(@"sqlite insert success (%d): %@", result,sql);
+
     }
     return YES;
 }
 - (BOOL)_dbDeleteDataForKey:(NSString *)key{
-    NSString *sql = @"delete from hhautocache where key = ?1;";
+    NSString *sql = [NSString stringWithFormat:@"delete from %@ where %@ = ?1",HH_CACHE_SQL_TABLE_NAME,HH_CACHE_SQL_FIELD_KEY];
     sqlite3_stmt *stmt = [self _dbPrepareStmt:sql];
     if (!stmt) return NO;
     sqlite3_bind_text(stmt, 1, key.UTF8String, -1, NULL);
     
     int result = sqlite3_step(stmt);
     if (result != SQLITE_DONE) {
-//        DBLOG(@"sqlite delete error (%d): %s", result, error);
+        DBLOG(@"sqlite delete error (%d): %s", result, sqlite3_errmsg(_db));
         return NO;
     }
     return YES;
 }
+- (BOOL)_dbDeleteAllData{
+    NSString *sql = [NSString stringWithFormat:@"delete from %@ ",HH_CACHE_SQL_TABLE_NAME];
+    sqlite3_stmt *stmt = [self _dbPrepareStmt:sql];
+    if (!stmt) return NO;    
+    int result = sqlite3_step(stmt);
+    if (result != SQLITE_DONE) {
+        DBLOG(@"sqlite delete error (%d): %s", result, sqlite3_errmsg(_db));
+        return NO;
+    }
+    return YES;
 
--(void)dealloc{
+}
+
+- (NSData *)_queryDataForKey:(NSString *)key{
+    NSString *sql = [NSString stringWithFormat:@"select %@ from %@ where %@ = ?1",HH_CACHE_SQL_FIELD_DATA,HH_CACHE_SQL_TABLE_NAME,HH_CACHE_SQL_FIELD_KEY];
+    sqlite3_stmt *stmt = [self _dbPrepareStmt:sql];
+    if (!stmt) return nil;
+    sqlite3_bind_text(stmt, 1, key.UTF8String, -1, NULL);
     
+    int result = sqlite3_step(stmt);
+    if (result == SQLITE_ROW) {
+        const void *inline_data = sqlite3_column_blob(stmt, 0);
+        int inline_data_bytes = sqlite3_column_bytes(stmt, 0);
+        if (!inline_data || inline_data_bytes <= 0) return nil;
+        return [NSData dataWithBytes:inline_data length:inline_data_bytes];
+    } else {
+        if (result != SQLITE_DONE) {
+            DBLOG(@"sqlite query error (%d): %s", result, sqlite3_errmsg(_db));
+
+        }
+        return nil;
+    }
+
+}
+-(void)dealloc{
+    [self _dbClose];
 }
 @end

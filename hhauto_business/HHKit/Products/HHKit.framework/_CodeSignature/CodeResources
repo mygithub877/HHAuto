@@ -16,9 +16,13 @@
 		<data>
 		txYJKjMpFCn6xtQFZ35gIPmh6HY=
 		</data>
+		<key>Headers/HHCache.h</key>
+		<data>
+		LxIbsBYyzL+ESqc2dUjj3+2vFDo=
+		</data>
 		<key>Headers/HHKit.h</key>
 		<data>
-		TF/7gx1AXKm27cnlErn0bamCHFk=
+		PW6C3tMpHSwtt/ZVeKsCInifW9Q=
 		</data>
 		<key>Headers/HHLocationManager.h</key>
 		<data>
@@ -27,6 +31,10 @@
 		<key>Headers/HHMemoryInfo.h</key>
 		<data>
 		nHKmW0+ZxcK7l075FzXvkz4rH3k=
+		</data>
+		<key>Headers/HHSQLiteCache.h</key>
+		<data>
+		eViR/kE076LtJRCs3dh/7tDv2Rg=
 		</data>
 		<key>Headers/HHSystemInfo.h</key>
 		<data>
@@ -62,7 +70,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yjtWsB16aUiEBF1AXYdjrzDrpp4=
+		AtxWqmiqOMtBvw+oG3YZOd42tg8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -104,15 +112,26 @@
 			io8tX3YcFnOMZqtPgzTHE23/Vo0+1iboVaMeflCbrH8=
 			</data>
 		</dict>
+		<key>Headers/HHCache.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LxIbsBYyzL+ESqc2dUjj3+2vFDo=
+			</data>
+			<key>hash2</key>
+			<data>
+			zX8LbexgIe4ZU1Zsygwg9DaTAHpbe0nkoy2SgSH4PQE=
+			</data>
+		</dict>
 		<key>Headers/HHKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TF/7gx1AXKm27cnlErn0bamCHFk=
+			PW6C3tMpHSwtt/ZVeKsCInifW9Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			m6s9JDYCGadszGnC/YTrWU7Q06co7XSmlfZap6Ame6Y=
+			OihbWrsP1/v7YNXaK70/W99vKeE5Nv6BfLStExKVd6Y=
 			</data>
 		</dict>
 		<key>Headers/HHLocationManager.h</key>
@@ -135,6 +154,17 @@
 			<key>hash2</key>
 			<data>
 			+NLwcPdPrpt8mTscMMhoII51KrW7abdkM4dDQJboeuw=
+			</data>
+		</dict>
+		<key>Headers/HHSQLiteCache.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eViR/kE076LtJRCs3dh/7tDv2Rg=
+			</data>
+			<key>hash2</key>
+			<data>
+			iJvqldW8ewFL/hwhQxxUjYWjAFPsanjEAmn+g3/qt0Y=
 			</data>
 		</dict>
 		<key>Headers/HHSystemInfo.h</key>

@@ -9,5 +9,14 @@
 #import "HHInterface.h"
 
 @implementation HHShopSession
+-(NSURLSessionDataTask *)asyncFetchShopTypeComplete:(HHSessionCompleteBlock)complete{
+    return nil;
+}
+-(NSURLSessionDataTask *)asyncFetchShopServiceComplete:(HHSessionCompleteBlock)complete{
+    return nil;
+}
+-(NSURLSessionDataTask *)asyncCreateShopWithParam:(HHCreateShopParam *)shopParam complete:(HHSessionCompleteBlock)complete{
+    return nil;
+}
 
 @end

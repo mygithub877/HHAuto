@@ -43,13 +43,4 @@ NSString *const kLoginFinishNotification=@"kLoginFinishNotification";
 -(NSURLSessionDataTask *)asyncVerifyHasPhone:(NSString *)phone complete:(HHSessionCompleteBlock)complete{
     return nil;
 }
--(NSURLSessionDataTask *)asyncFetchShopTypeComplete:(HHSessionCompleteBlock)complete{
-    return nil;
-}
--(NSURLSessionDataTask *)asyncFetchShopServiceComplete:(HHSessionCompleteBlock)complete{
-    return nil;
-}
--(NSURLSessionDataTask *)asyncCreateShopWithParam:(HHCreateShopParam *)shopParam complete:(HHSessionCompleteBlock)complete{
-    return nil;
-}
 @end

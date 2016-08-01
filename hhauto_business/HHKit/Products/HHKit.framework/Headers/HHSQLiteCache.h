@@ -4,8 +4,7 @@
 //
 //  Created by liuwenjie on 16/7/31.
 //  Copyright © 2016年 HHAuto. All rights reserved.
-
-//  目前只支持二进制数据的存储,日后再更新其他类型数据的存储
+//
 
 #import <Foundation/Foundation.h>
 

@@ -55,21 +55,6 @@ extern  NSString *const   kLoginFinishNotification;
  */
 - (NSURLSessionDataTask *)asyncVerifyHasPhone:(NSString *)phone complete:(HHSessionCompleteBlock)complete;
 
-/*! @method 获取店铺类目
- *  @reponse NSArray <HHShopType *>
- */
-- (NSURLSessionDataTask *)asyncFetchShopTypeComplete:(HHSessionCompleteBlock)complete;
-
-/*! @method 获取店铺服务范围
- *  @reponse NSArray <HHShopService *>
- */
-- (NSURLSessionDataTask *)asyncFetchShopServiceComplete:(HHSessionCompleteBlock)complete;
-
-/*! @method 创建店铺
- *  @shopParam HHCreateShopParam
- *  @reponse @(YES/NO)
- */
-- (NSURLSessionDataTask *)asyncCreateShopWithParam:(HHCreateShopParam *)shopParam complete:(HHSessionCompleteBlock)complete;
 
 @end
 #pragma mark - 请求参数

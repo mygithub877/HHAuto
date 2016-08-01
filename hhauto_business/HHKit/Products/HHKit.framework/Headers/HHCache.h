@@ -19,7 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HHCache : NSObject
 
 @property (nonatomic, strong) NSString *path;
-@property (nonatomic, strong) NSString *maxMemoryCacheSize;//默认100M,当超过100M时则自动清空
 
 
 + (instancetype)sharedInstance;
@@ -36,11 +35,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  获取归档对象,先取内存缓存,如果没有则取磁盘缓存
  */
-- (id)objectForKey:(NSString *)key;
+- (nullable id<NSCoding>)objectForKey:(NSString *)key;
 /**
  *  根据指定缓存协议来获取对象
  */
-- (id)objectForKey:(NSString *)key option:(HHCacheOption)option;
+- (nullable id<NSCoding>)objectForKey:(NSString *)key option:(HHCacheOption)option;
 
 /**
  *  移除指定缓存(磁盘和内存)

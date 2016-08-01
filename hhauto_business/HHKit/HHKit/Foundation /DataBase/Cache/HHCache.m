@@ -7,12 +7,14 @@
 //
 
 #import "HHCache.h"
-
+#import "HHSQLiteCache.h"
 
 #define HH_CACHE_DB_FILE_NAME @"com.hhauto.cache.sqlite"
 
 @interface HHCache()
 @property (nonatomic, strong) NSMutableDictionary *memoryCache;
+@property (nonatomic, strong) HHSQLiteCache *dbCache;
+
 @end
 @implementation HHCache
 
@@ -28,7 +30,7 @@
 - (NSString *)path{
     if (_path==nil) {
         NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-        NSString *path = [cacheFolder stringByAppendingPathComponent:HH_CACHE_DB_FILE_NAME];
+        _path = [cacheFolder stringByAppendingPathComponent:HH_CACHE_DB_FILE_NAME];
     }
   
     return _path;
@@ -38,6 +40,12 @@
         _memoryCache=[NSMutableDictionary dictionary];
     }
     return _memoryCache;
+}
+- (HHSQLiteCache *)dbCache{
+    if (_dbCache==nil) {
+        _dbCache=[[HHSQLiteCache alloc] initWithDBName:HH_CACHE_DB_FILE_NAME];
+    }
+    return _dbCache;
 }
 #pragma mark - public method
 /**
@@ -90,7 +98,7 @@
 /**
  *  获取归档对象,先取内存缓存,如果没有则取磁盘缓存
  */
-- (nullable id<NSCoding>)objectForKey:(NSString *)key{
+- (id<NSCoding>)objectForKey:(NSString *)key{
     if (key==nil) {return nil;}
     id object=self.memoryCache[key];
     if (!object) {
@@ -102,7 +110,7 @@
 /**
  *  根据指定缓存协议来获取对象
  */
-- (nullable id<NSCoding>)objectForKey:(NSString *)key option:(HHCacheOption)option{
+- (id<NSCoding>)objectForKey:(NSString *)key option:(HHCacheOption)option{
     if (key==nil) {return nil;}
     if (option==HHCacheOptionMemoryAndDisk) {
         id object=self.memoryCache[key];
@@ -157,15 +165,19 @@
 #pragma mark - db operation
 
 - (BOOL)saveObjectData:(NSData *)data forKey:(NSString *)key{
-    return YES;
+    if (data) {
+        return [self.dbCache saveData:data forKey:key];
+    }else{
+        return [self.dbCache removeDataForKey:key];
+    }
 }
 - (NSData *)objectDataForKey:(NSString *)key{
-    return nil;
+    return [self.dbCache dataForKey:key];
 }
 - (void)removeObjectDataForKey:(NSString *)key{
-    
+    [self.dbCache removeDataForKey:key];
 }
 - (void)removeAllObjectDatas{
-    
+    [self.dbCache removeAllData];
 }
 @end

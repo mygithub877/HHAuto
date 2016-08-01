@@ -21,7 +21,8 @@ FOUNDATION_EXPORT const unsigned char HHKitVersionString[];
 #import "HHLocationManager.h"
 #import "HHBlurView.h"
 #import "HHAlertView.h"
-
+#import "HHCache.h"
+#import "HHSQLiteCache.h"
 
 
 #import "UIImage+Util.h"

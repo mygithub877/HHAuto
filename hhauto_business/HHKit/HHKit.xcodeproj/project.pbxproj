@@ -37,9 +37,9 @@
 		0D5696FF1D4BAB440070F9DF /* NSDictionary+SafeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696F91D4BAB440070F9DF /* NSDictionary+SafeData.m */; };
 		0D5697001D4BAB440070F9DF /* NSMutableArray+Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5696FA1D4BAB440070F9DF /* NSMutableArray+Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D5697011D4BAB440070F9DF /* NSMutableArray+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5696FB1D4BAB440070F9DF /* NSMutableArray+Common.m */; };
-		0D56971C1D4DDF9B0070F9DF /* HHCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D56971A1D4DDF9B0070F9DF /* HHCache.h */; };
+		0D56971C1D4DDF9B0070F9DF /* HHCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D56971A1D4DDF9B0070F9DF /* HHCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D56971D1D4DDF9B0070F9DF /* HHCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56971B1D4DDF9B0070F9DF /* HHCache.m */; };
-		0D5697201D4E38AB0070F9DF /* HHSQLiteCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D56971E1D4E38AB0070F9DF /* HHSQLiteCache.h */; };
+		0D5697201D4E38AB0070F9DF /* HHSQLiteCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D56971E1D4E38AB0070F9DF /* HHSQLiteCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D5697211D4E38AB0070F9DF /* HHSQLiteCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56971F1D4E38AB0070F9DF /* HHSQLiteCache.m */; };
 		ED8961A31D4ADE8D00A2C031 /* HHCPUUsage.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8961911D4ADE8D00A2C031 /* HHCPUUsage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED8961A41D4ADE8D00A2C031 /* HHCPUUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8961921D4ADE8D00A2C031 /* HHCPUUsage.m */; };
@@ -309,12 +309,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5697201D4E38AB0070F9DF /* HHSQLiteCache.h in Headers */,
+				0D56971C1D4DDF9B0070F9DF /* HHCache.h in Headers */,
 				0D5696F01D4BA5450070F9DF /* UIImage+Util.h in Headers */,
 				0D5696FC1D4BAB440070F9DF /* NSArray+Common.h in Headers */,
 				0D5697001D4BAB440070F9DF /* NSMutableArray+Common.h in Headers */,
 				0D5696F41D4BAA3C0070F9DF /* NSObject+Util.h in Headers */,
 				0D5696FE1D4BAB440070F9DF /* NSDictionary+SafeData.h in Headers */,
-				0D5697201D4E38AB0070F9DF /* HHSQLiteCache.h in Headers */,
 				0D5696E81D4BA5270070F9DF /* NSString+Util.h in Headers */,
 				0D5696EC1D4BA5360070F9DF /* UIView+Util.h in Headers */,
 				ED8961A51D4ADE8D00A2C031 /* HHMemoryInfo.h in Headers */,
@@ -326,7 +327,6 @@
 				0D5696031D4348290070F9DF /* PrivateHeader.h in Headers */,
 				0D5695FF1D4347C70070F9DF /* MBProgressHUD.h in Headers */,
 				EDF5952E1D2F4D0600052039 /* HHKit.h in Headers */,
-				0D56971C1D4DDF9B0070F9DF /* HHCache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
