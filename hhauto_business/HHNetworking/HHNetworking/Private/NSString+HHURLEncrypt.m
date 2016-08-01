@@ -7,7 +7,7 @@
 //
 
 #import "NSString+HHURLEncrypt.h"
-#import <CommonCrypto/CommonCrypto.h>
+
 @implementation NSString (HHURLEncrypt)
 - (NSString *)md5String {
     const char *str = self.UTF8String;
@@ -41,57 +41,85 @@
     return appVersion;
 }
 -(NSString *)net_encryptAES:(NSString *)key{
-    NSData *strData=[self dataUsingEncoding:NSUTF8StringEncoding];
-    char keyPtr[kCCKeySizeAES256];
-    bzero(keyPtr, sizeof(keyPtr));
-    [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    NSUInteger dataLength = [self length];
-    size_t bufferSize = dataLength + kCCBlockSizeAES128;
-    void *buffer = malloc(bufferSize);
-    size_t numBytesEncrypted = 0;
-    CCCryptorStatus cryptStatus = CCCrypt(kCCEncrypt, kCCAlgorithmAES128,
-                                          kCCOptionPKCS7Padding | kCCOptionECBMode,
-                                          keyPtr, kCCBlockSizeAES128,
-                                          NULL,
-                                          [strData bytes], dataLength,
-                                          buffer, bufferSize,
-                                          &numBytesEncrypted);
-    if (cryptStatus == kCCSuccess) {
-        NSData *enData=[NSData dataWithBytesNoCopy:buffer length:numBytesEncrypted];
-        NSString *base64Str=[enData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-        
-        return base64Str;
-    }else{
-        free(buffer);
-        return nil;
-    }
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *result = [data net_encryptAES:key];
+    
+    return [result base64EncodedStringWithOptions:0];
+
+    
 }
 -(NSString *)net_decryptAES:(NSString *)key{
-    NSData *strData=[[NSData alloc] initWithBase64EncodedString:self options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:self options:0];
+    NSData *result = [data net_decryptAES:key];
     
-    char keyPtr[kCCKeySizeAES256+1];
-    bzero(keyPtr, sizeof(keyPtr));
-    [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    NSUInteger dataLength = [self length];
-    size_t bufferSize = dataLength + kCCBlockSizeAES128;
-    void *buffer = malloc(bufferSize);
-    size_t numBytesDecrypted = 0;
-    CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt, kCCAlgorithmAES128,
-                                          kCCOptionPKCS7Padding | kCCOptionECBMode,
-                                          keyPtr, kCCBlockSizeAES128,
-                                          NULL,
-                                          [strData bytes], dataLength,
-                                          buffer, bufferSize,
-                                          &numBytesDecrypted);
-    if (cryptStatus == kCCSuccess) {
-        NSData *deData=[NSData dataWithBytesNoCopy:buffer length:numBytesDecrypted];
-        NSString *rs=[[NSString alloc] initWithData:deData encoding:NSUTF8StringEncoding];
-        
-        return rs;
-    }
-    free(buffer);
-    return nil;
+    return [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+
 }
+
+
+@end
+@implementation NSData (HHURLEncrypt)
+#pragma mark 加密
+-(NSData *)net_encryptAES:(NSString *)key{
+    return  [NSData CCCryptData:self algorithm:kCCAlgorithmAES operation:kCCEncrypt keyString:key iv:nil];
+}
+
+#pragma mark 解密
+-(NSData *)net_decryptAES:(NSString *)key{
+    return [NSData CCCryptData:self algorithm:kCCAlgorithmAES operation:kCCDecrypt keyString:key iv:nil];
+}
+
+#pragma mark 对称加密&解密核心方法
+///  @return 加密/解密结果
++ (NSData *)CCCryptData:(NSData *)data algorithm:(CCAlgorithm)algorithm operation:(CCOperation)operation keyString:(NSString *)keyString iv:(NSData *)iv {
+    
+    int keySize = (algorithm == kCCAlgorithmAES) ? kCCKeySizeAES256 : kCCKeySizeDES;
+    int blockSize = (algorithm == kCCAlgorithmAES) ? kCCKeySizeAES256: kCCBlockSizeDES;
+    
+    
+    NSData *keyData = [keyString dataUsingEncoding:NSUTF8StringEncoding];
+    uint8_t cKey[keySize];
+    bzero(cKey, sizeof(cKey));
+    [keyData getBytes:cKey length:keySize];
+    
+    
+    uint8_t cIv[blockSize];
+    bzero(cIv, blockSize);
+    int option = kCCOptionPKCS7Padding | kCCOptionECBMode;
+    if (iv) {
+        [iv getBytes:cIv length:blockSize];
+        option = kCCOptionPKCS7Padding;
+    }
+    
+    
+    size_t bufferSize = [data length] + blockSize;
+    void *buffer = malloc(bufferSize);
+    
+    // 加密或解密
+    size_t cryptorSize = 0;
+    CCCryptorStatus cryptStatus = CCCrypt(operation,
+                                          algorithm,
+                                          option,
+                                          cKey,
+                                          keySize,
+                                          cIv,
+                                          [data bytes],
+                                          [data length],
+                                          buffer,
+                                          bufferSize,
+                                          &cryptorSize);
+    
+    NSData *result = nil;
+    if (cryptStatus == kCCSuccess) {
+        result = [NSData dataWithBytesNoCopy:buffer length:cryptorSize];
+    } else {
+        free(buffer);
+        NSLog(@"[错误] 加密或解密失败 | 状态编码: %d", cryptStatus);
+    }
+    
+    return result;
+}
+
 
 
 @end

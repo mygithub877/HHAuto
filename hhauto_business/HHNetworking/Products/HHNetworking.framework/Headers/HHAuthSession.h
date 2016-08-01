@@ -13,6 +13,8 @@ typedef NS_ENUM(NSInteger,HHVerifyCodeType){
     HHVerifyCodeTypeLostPwd,
 };
 
+extern  NSString *const   kLoginFinishNotification;
+
 @class HHCreateShopParam;
 
 @protocol HHAuthSession <NSObject>

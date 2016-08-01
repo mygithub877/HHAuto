@@ -81,6 +81,8 @@
 		ED8961BC1D4B2CA100A2C031 /* NSString+HHURLEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8961BA1D4B2CA100A2C031 /* NSString+HHURLEncrypt.m */; };
 		ED8961BF1D4B37C100A2C031 /* HHSettlementSession.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8961BD1D4B37C100A2C031 /* HHSettlementSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED8961C01D4B37C100A2C031 /* HHSettlementSession.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8961BE1D4B37C100A2C031 /* HHSettlementSession.m */; };
+		ED8961F31D4ED72500A2C031 /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8961F01D4ED72500A2C031 /* GTMBase64.h */; };
+		ED8961F51D4ED72500A2C031 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8961F21D4ED72500A2C031 /* GTMDefines.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +175,9 @@
 		ED8961BA1D4B2CA100A2C031 /* NSString+HHURLEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HHURLEncrypt.m"; sourceTree = "<group>"; };
 		ED8961BD1D4B37C100A2C031 /* HHSettlementSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSettlementSession.h; sourceTree = "<group>"; };
 		ED8961BE1D4B37C100A2C031 /* HHSettlementSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHSettlementSession.m; sourceTree = "<group>"; };
+		ED8961F01D4ED72500A2C031 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		ED8961F11D4ED72500A2C031 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		ED8961F21D4ED72500A2C031 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +300,7 @@
 		0D56963E1D4A33380070F9DF /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				ED8961EF1D4ED72500A2C031 /* GTMBase64 */,
 				0D56963F1D4A33380070F9DF /* AFNetworking */,
 				0D5696651D4A33380070F9DF /* MJExtension */,
 			);
@@ -417,6 +423,16 @@
 			path = HHNetworking;
 			sourceTree = "<group>";
 		};
+		ED8961EF1D4ED72500A2C031 /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				ED8961F01D4ED72500A2C031 /* GTMBase64.h */,
+				ED8961F11D4ED72500A2C031 /* GTMBase64.m */,
+				ED8961F21D4ED72500A2C031 /* GTMDefines.h */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -424,6 +440,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8961F31D4ED72500A2C031 /* GTMBase64.h in Headers */,
 				0D5696DF1D4B9DBF0070F9DF /* HHShopService.h in Headers */,
 				0D5696DB1D4B9D100070F9DF /* HHShopType.h in Headers */,
 				ED8961BF1D4B37C100A2C031 /* HHSettlementSession.h in Headers */,
@@ -463,6 +480,7 @@
 				0D5696B51D4A33380070F9DF /* NSObject+MJCoding.h in Headers */,
 				0D5696B91D4A33380070F9DF /* NSObject+MJProperty.h in Headers */,
 				0D56969C1D4A33380070F9DF /* UIButton+AFNetworking.h in Headers */,
+				ED8961F51D4ED72500A2C031 /* GTMDefines.h in Headers */,
 				0D56968E1D4A33380070F9DF /* AFURLResponseSerialization.h in Headers */,
 				0D5696B71D4A33380070F9DF /* NSObject+MJKeyValue.h in Headers */,
 				0D5696BB1D4A33380070F9DF /* NSString+MJExtension.h in Headers */,

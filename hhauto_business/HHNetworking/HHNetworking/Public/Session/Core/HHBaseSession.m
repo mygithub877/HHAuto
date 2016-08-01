@@ -53,7 +53,10 @@
         configuration.HTTPShouldSetCookies = YES;
         _sessionManager= [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
         _sessionManager.securityPolicy=securityPolicy;
-        [_sessionManager setResponseSerializer:[AFJSONResponseSerializer new]];
+        //MARK:获取原始加密数据
+//        [_sessionManager setResponseSerializer:[AFJSONResponseSerializer new]];
+        [_sessionManager setResponseSerializer:[AFHTTPResponseSerializer new]];
+
         _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/plain",@"text/html",@"application/xml",nil];
         [_sessionManager.requestSerializer setTimeoutInterval:self.timeoutInterval];
         
@@ -71,7 +74,10 @@
         configuration.HTTPShouldSetCookies = YES;
         _jsonSessionManager= [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
         _jsonSessionManager.securityPolicy=securityPolicy;
-        [_jsonSessionManager setResponseSerializer:[AFJSONResponseSerializer serializer]];
+        //MARK:获取原始加密数据
+//        [_jsonSessionManager setResponseSerializer:[AFJSONResponseSerializer serializer]];
+        [_jsonSessionManager setResponseSerializer:[AFHTTPResponseSerializer serializer]];
+
         _jsonSessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/plain",@"application/json",nil];
         [_jsonSessionManager.requestSerializer setTimeoutInterval:self.timeoutInterval];
         
@@ -101,13 +107,26 @@
     [params setDictionary:dict];
     return [params copy];
 }
+
+- (id)JSONDecryptResponseData:(NSData *)data{
+    NSData *deData=[data net_decryptAES:kAESKey];
+    NSError *error;
+    id json=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    if (error) {
+        FMWLog(@"json serialization error:%@",error);
+    }
+    return json;
+}
+
 - (NSURLSessionDataTask *)GET:(NSString *)url params:(NSDictionary *)dict complete:(HHSessionCompleteBlock)complt{
     NSURLSessionDataTask *task=[self.sessionManager GET:url parameters:[self encryptParams:dict] progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        FMWLog(@"\n\n路径:%@\n***请求结果:\n%@\n***结束\n\n",url,responseObject);
-        complt(responseObject,nil);
+        id object=[self JSONDecryptResponseData:responseObject];
+        
+        FMWLog(@"\n\n路径:%@\n***请求结果:\n%@\n***结束\n\n",url,object);
+        complt(object,nil);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         FMWLog(@"task:%@error:%@",task,error);
@@ -124,8 +143,11 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        FMWLog(@"\n\n路径:%@\n***请求结果:\n%@\n***结束\n\n",url,responseObject);
-        complt(responseObject,nil);
+        
+        id object=[self JSONDecryptResponseData:responseObject];
+        
+        FMWLog(@"\n\n路径:%@\n***请求结果:\n%@\n***结束\n\n",url,object);
+        complt(object,nil);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         FMWLog(@"task:%@error:%@",task,error);
@@ -143,8 +165,11 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        FMWLog(@"\n\n路径:%@\n***请求结果:\n%@\n***结束\n\n",url,responseObject);
-        complt(responseObject,nil);
+        
+        id object=[self JSONDecryptResponseData:responseObject];
+        
+        FMWLog(@"\n\n路径:%@\n***请求结果:\n%@\n***结束\n\n",url,object);
+        complt(object,nil);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         FMWLog(@"task:%@error:%@",task,error);
@@ -169,8 +194,11 @@
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        FMWLog(@"\n\n路径:%@\n***请求结果:\n%@\n***结束\n\n",url,responseObject);
-        complt(responseObject,nil);
+        
+        id object=[self JSONDecryptResponseData:responseObject];
+        
+        FMWLog(@"\n\n路径:%@\n***请求结果:\n%@\n***结束\n\n",url,object);
+        complt(object,nil);
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         FMWLog(@"task:%@error:%@",task,error);
@@ -194,6 +222,9 @@
     }];
     return task;
 
+}
+- (void)resetConfiguration{
+    
 }
 -(void)cancleAllRequest{
     

@@ -13,6 +13,9 @@ typedef NS_ENUM(NSInteger, HHCacheOption) {
     HHCacheOptionMemoryOnly,
     HHCacheOptionDiskOnly
 };
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface HHCache : NSObject
 
 @property (nonatomic, strong) NSString *path;
@@ -52,4 +55,5 @@ typedef NS_ENUM(NSInteger, HHCacheOption) {
  */
 - (void)removeAllObjects;
 
+NS_ASSUME_NONNULL_END
 @end

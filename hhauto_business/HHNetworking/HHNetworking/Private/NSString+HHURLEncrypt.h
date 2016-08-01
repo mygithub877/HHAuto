@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonCrypto.h>
 
 @interface NSString (HHURLEncrypt)
 /**
@@ -33,5 +34,15 @@
  */
 - (NSString *)net_encryptAES:(NSString *)key;
 - (NSString *)net_decryptAES:(NSString *)key;
+
+
+@end
+
+@interface NSData (HHURLEncrypt)
+
+- (NSData *)net_encryptAES:(NSString *)key;
+- (NSData *)net_decryptAES:(NSString *)key;
+
++ (NSData *)CCCryptData:(NSData *)data algorithm:(CCAlgorithm)algorithm operation:(CCOperation)operation keyString:(NSString *)keyString iv:(NSData *)iv;
 
 @end

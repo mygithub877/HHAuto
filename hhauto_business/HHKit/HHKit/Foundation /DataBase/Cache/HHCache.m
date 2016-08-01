@@ -46,7 +46,7 @@
 - (void)setObject:(nullable id<NSCoding>)object forKey:(NSString *)key{
     if (key==nil) {return;}
     self.memoryCache[key]=object;
-    if ([object conformsToProtocol:NSCoding]) {
+    if ([(NSObject *)object conformsToProtocol:@protocol(NSCoding)]) {
         if (object) {
             NSData *data=[NSKeyedArchiver archivedDataWithRootObject:object];
             [self saveObjectData:data forKey:key];
@@ -62,7 +62,7 @@
     if (key==nil) {return;}
     if (option==HHCacheOptionMemoryAndDisk) {
         self.memoryCache[key]=object;
-        if ([object conformsToProtocol:NSCoding]) {
+        if ([(NSObject *)object conformsToProtocol:@protocol(NSCoding)]) {
             if (object) {
                 NSData *data=[NSKeyedArchiver archivedDataWithRootObject:object];
                 [self saveObjectData:data forKey:key];
@@ -75,7 +75,7 @@
         self.memoryCache[key]=object;
         
     }else if (option==HHCacheOptionDiskOnly){
-        if ([object conformsToProtocol:NSCoding]) {
+        if ([(NSObject *)object conformsToProtocol:@protocol(NSCoding)]) {
             if (object) {
                 NSData *data=[NSKeyedArchiver archivedDataWithRootObject:object];
                 [self saveObjectData:data forKey:key];
@@ -91,7 +91,7 @@
  *  获取归档对象,先取内存缓存,如果没有则取磁盘缓存
  */
 - (nullable id<NSCoding>)objectForKey:(NSString *)key{
-    if (key==nil) {return;}
+    if (key==nil) {return nil;}
     id object=self.memoryCache[key];
     if (!object) {
         NSData *data=[self objectDataForKey:key];
@@ -103,7 +103,7 @@
  *  根据指定缓存协议来获取对象
  */
 - (nullable id<NSCoding>)objectForKey:(NSString *)key option:(HHCacheOption)option{
-    if (key==nil) {return;}
+    if (key==nil) {return nil;}
     if (option==HHCacheOptionMemoryAndDisk) {
         id object=self.memoryCache[key];
         if (!object) {
@@ -120,6 +120,7 @@
         id object=[NSKeyedUnarchiver unarchiveObjectWithData:data];
         return object;
     }
+    return nil;
 }
 
 /**
@@ -154,7 +155,7 @@
     [self removeAllObjectDatas];
 }
 #pragma mark - db operation
--
+
 - (BOOL)saveObjectData:(NSData *)data forKey:(NSString *)key{
     return YES;
 }

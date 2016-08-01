@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/HHAuthSession.h</key>
 		<data>
-		YaQEHgn2FYwD29EV3XtoNbmhiI4=
+		ZB4ptI2NMn4SNOAMuWeTQApC45A=
 		</data>
 		<key>Headers/HHBaseSession.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/HHClient.h</key>
 		<data>
-		OQxOgSIOhL235JNSbvnL54iDSKI=
+		lf7AtvP71ATfAocHEeDmIEnkWF8=
 		</data>
 		<key>Headers/HHError.h</key>
 		<data>
@@ -58,11 +58,11 @@
 		</data>
 		<key>Headers/HHUser.h</key>
 		<data>
-		pYGPEcYEsmSvXEv6+oHw4DZfxek=
+		6HapLobm88hL2r3/A+MIE5zsCHU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		r1DBc0v7knV4jke73PetZiAcmRM=
+		yzR5lPshcbHKi+1LQwH96fdk1EQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,11 +75,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YaQEHgn2FYwD29EV3XtoNbmhiI4=
+			ZB4ptI2NMn4SNOAMuWeTQApC45A=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ladyuujj5p5G5CBADYbK7UFiEv/NEaXzcdUoer04lz4=
+			dk+bZmKZ9mzXP9Hrv9JA8atbGYJs3ueb2PLY0bg/LK8=
 			</data>
 		</dict>
 		<key>Headers/HHBaseSession.h</key>
@@ -97,11 +97,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OQxOgSIOhL235JNSbvnL54iDSKI=
+			lf7AtvP71ATfAocHEeDmIEnkWF8=
 			</data>
 			<key>hash2</key>
 			<data>
-			nnkZMbee/IGH8c3MYxINuyn/HiHa1LYcIxOlkaOYKTQ=
+			lpbUrQ3uxvGuJCpPKj22zoRBZBruVi2Gf6u4zOe6tyY=
 			</data>
 		</dict>
 		<key>Headers/HHError.h</key>
@@ -218,11 +218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pYGPEcYEsmSvXEv6+oHw4DZfxek=
+			6HapLobm88hL2r3/A+MIE5zsCHU=
 			</data>
 			<key>hash2</key>
 			<data>
-			6wDyhSpKXGxqswQjtjzZtsURDCaE1+2c/RNKlBrvoTY=
+			cP3xeYLaF1go3m3RKXDMV7fAeMFcnc4CshQBod8bZBo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

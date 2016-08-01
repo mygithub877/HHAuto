@@ -29,11 +29,11 @@
 /**
  *  保存或替换二进制数据对象
  */
-- (BOOL)saveData:(NSData *) forKey:(NSString *)key;
+- (BOOL)saveData:(NSData *)data forKey:(NSString *)key;
 /**
  *  获取二进制数据对象
  */
-- (NSData)dataForKey:(NSString *)key;
+- (NSData *)dataForKey:(NSString *)key;
 /**
  *  移除二进制数据对象
  */

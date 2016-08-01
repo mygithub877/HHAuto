@@ -12,7 +12,7 @@
 #import "HHAPIConst.h"
 #import "HHServerConfig.h"
 #import "NSString+HHURLEncrypt.h"
-
+#import "MJExtension.h"
 @interface HHAuthSession : HHBaseSession <HHAuthSession>
 
 @end

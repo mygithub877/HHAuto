@@ -23,7 +23,7 @@
     HHBaseViewController *base=[[HHBaseViewController alloc] init];
     HHNavigationController *nav=[[HHNavigationController alloc] initWithRootViewController:base];
 
-//    [[[HHBaseSession alloc] init] testEncriypt];
+    [[[HHBaseSession alloc] init] testEncriypt];
     
     self.window.rootViewController=nav;
     

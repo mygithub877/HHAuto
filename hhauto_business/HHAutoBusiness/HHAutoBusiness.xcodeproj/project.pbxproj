@@ -21,6 +21,7 @@
 		ED8961E71D4B3E7100A2C031 /* HHKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8961E61D4B3E7100A2C031 /* HHKit.framework */; };
 		ED8961E91D4B3E8600A2C031 /* HHNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8961E81D4B3E8600A2C031 /* HHNetworking.framework */; };
 		ED8961EB1D4B3EBC00A2C031 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8961EA1D4B3EBC00A2C031 /* libstdc++.tbd */; };
+		ED8961EE1D4ED4DB00A2C031 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8961ED1D4ED4DB00A2C031 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		ED8961E81D4B3E8600A2C031 /* HHNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HHNetworking.framework; path = ../HHNetworking/Products/HHNetworking.framework; sourceTree = "<group>"; };
 		ED8961EA1D4B3EBC00A2C031 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		ED8961EC1D4B3FC200A2C031 /* HHPrefixHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHPrefixHeader.h; sourceTree = "<group>"; };
+		ED8961ED1D4ED4DB00A2C031 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8961EE1D4ED4DB00A2C031 /* libsqlite3.0.tbd in Frameworks */,
 				ED8961EB1D4B3EBC00A2C031 /* libstdc++.tbd in Frameworks */,
 				ED8961E91D4B3E8600A2C031 /* HHNetworking.framework in Frameworks */,
 				75484B3F2EDA27F16735359F /* libPods-HHAutoBusiness.a in Frameworks */,
@@ -104,6 +107,7 @@
 		DB428C526CFE6CBEE1F3474F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED8961ED1D4ED4DB00A2C031 /* libsqlite3.0.tbd */,
 				ED8961EA1D4B3EBC00A2C031 /* libstdc++.tbd */,
 				45C9070AD387C07954FA68E9 /* libPods-HHAutoBusiness.a */,
 				77C439E4FDAFB88F322816BF /* libPods-HHAutoBusinessTests.a */,

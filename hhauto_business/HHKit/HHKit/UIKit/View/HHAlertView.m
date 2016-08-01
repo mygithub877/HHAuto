@@ -96,7 +96,7 @@
     if ([self iosVersion] >= 8.0) {
         _buttonIndex++;
         _blockReferenceVariable++;
-        int i=_buttonIndex;
+        NSInteger i=_buttonIndex;
         UIAlertAction *action=[UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self buttonClickIndex:i complete:_alertHandleBlock];
         }];

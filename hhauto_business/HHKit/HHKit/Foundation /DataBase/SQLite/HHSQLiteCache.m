@@ -46,20 +46,20 @@
  */
 - (instancetype)initWithDBName:(NSString *)dbName{
     NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *path = [cacheFolder stringByAppendingPathComponent:name];
+    NSString *path = [cacheFolder stringByAppendingPathComponent:dbName];
     return [self initWithPath:path];
 }
 
 /**
  *  保存或替换二进制数据对象
  */
-- (BOOL)saveData:(NSData *) forKey:(NSString *)key{
+- (BOOL)saveData:(NSData *)data forKey:(NSString *)key{
     return NO;
 }
 /**
  *  获取二进制数据对象
  */
-- (NSData)dataForKey:(NSString *)key{
+- (NSData *)dataForKey:(NSString *)key{
     return nil;
 }
 /**
@@ -77,7 +77,7 @@
 #pragma mark - SQLite
 - (void)_initilizeDataBase{
     NSString *sql = @"create table if not exists hhautocache (key text,size integer, cache_data blob, modification_time integer, primary key(key));";
-    return [self _dbExecute:sql];
+    [self _dbExecute:sql];
 
 }
 - (BOOL)_dbOpen {
@@ -116,7 +116,7 @@
                 }
             }
         } else if (result != SQLITE_OK) {
-            DBLOG(@"sqlite exec error (%d): %s", result, error);
+//            DBLOG(@"sqlite exec error (%d): %s", result, error);
         }
     } while (retry);
     _db = NULL;
@@ -125,7 +125,7 @@
 }
 - (BOOL)_dbExecute:(NSString *)sql {
     if (sql.length == 0) return NO;
-    if (![self _dbCheck]) return NO;
+//    if (![self _dbCheck]) return NO;
     
     char *error = NULL;
     int result = sqlite3_exec(_db, sql.UTF8String, NULL, NULL, &error);
@@ -142,7 +142,7 @@
     if (!stmt) {
         int result = sqlite3_prepare_v2(_db, sql.UTF8String, -1, &stmt, NULL);
         if (result != SQLITE_OK) {
-            DBLOG(@"sqlite stmt prepare error (%d): %s", result, error);
+//            DBLOG(@"sqlite stmt prepare error (%d): %s", result, error);
             return NULL;
         }
         CFDictionarySetValue(_dbStmtCache, (__bridge const void *)(sql), stmt);
@@ -156,14 +156,13 @@
     NSString *sql = @"insert or replace into hhautocache (key, size, cache_data, modification_time) values (?1, ?2, ?3, ?4);";
     sqlite3_stmt *stmt=[self _dbPrepareStmt:sql];
     if (!stmt) return NO;
-    int timestamp = (int)time(NULL);
     sqlite3_bind_text(stmt, 1, key.UTF8String, -1, NULL);
     sqlite3_bind_int(stmt, 2, (int)data.length);
     sqlite3_bind_blob(stmt, 3, data.bytes, (int)data.length, 0);
     sqlite3_bind_int(stmt, 4, timestamp);
     int result = sqlite3_step(stmt);
     if (result != SQLITE_DONE) {
-        DBLOG(@"sqlite insert error (%d): %s", result, error);
+//        DBLOG(@"sqlite insert error (%d): %s", result, error);
         return NO;
     }
     return YES;
@@ -176,7 +175,7 @@
     
     int result = sqlite3_step(stmt);
     if (result != SQLITE_DONE) {
-        DBLOG(@"sqlite delete error (%d): %s", result, error);
+//        DBLOG(@"sqlite delete error (%d): %s", result, error);
         return NO;
     }
     return YES;
